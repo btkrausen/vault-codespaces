@@ -1,5 +1,5 @@
 {
-  "name": "Vault Dev Container",
+  "name": "Standard Vault Container (Unsealed)",
   "build": {
     "dockerfile": "Dockerfile",
     "context": "." // Use the current folder as the build context

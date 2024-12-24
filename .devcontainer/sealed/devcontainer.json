@@ -1,6 +1,6 @@
 {
     // Name as it appears in VS Code
-    "name": "Vault Dev Container",
+    "name": "Unconfigured Vault Container (Sealed)",
 
     // Use the Dockerfile in the same folder
     "build": {
