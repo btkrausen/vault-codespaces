@@ -1,4 +1,4 @@
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?repo=btkrausen/vault-codespaces&ref=main&folder=lab_unseal_vault_with_keys)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?repo=btkrausen/vault-codespaces)
 
 # Lab: Initializing and Unsealing Vault in a GitHub Codespace
 
