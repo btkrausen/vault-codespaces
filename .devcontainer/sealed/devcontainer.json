@@ -1,33 +1,31 @@
 {
-    // Name as it appears in VS Code
-    "name": "Unconfigured Vault Container (Sealed)",
+  "name": "Standard Vault Container (Unsealed)",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "." // Use the current folder as the build context
+  },
 
-    // Use the Dockerfile in the same folder
-    "build": {
-        "dockerfile": "Dockerfile",
-        "context": "." // Use the current folder as the build context
-    },
+  // Forward port 8200 to your local machine
+  "forwardPorts": [8200],
 
-    // Forward Vault's default port so you can reach it in the Codespace
-    "forwardPorts": [8200],
+  // Tell Vault CLI which address to connect to by default
+  "remoteEnv": {
+    "VAULT_ADDR": "http://127.0.0.1:8200"
+  },
 
-    // Set environment variables inside the container so Vault CLI knows where to connect
-    "remoteEnv": {
-        "VAULT_ADDR": "http://127.0.0.1:8200",
-        "VAULT_TOKEN": "root" // We'll use the root token from dev mode
-    },
+  // Start Vault using our config in the background.
+  // We do NOT initialize or unseal here. That is up to the user.
+  "postStartCommand": "vault server -config=/home/codespace/vault.hcl &",
 
-    // Start Vault in dev mode once the container is up
-    "postStartCommand": "vault server -dev -dev-root-token-id=root & sleep 2",
+  // Recommended to set a default shell for codespaces
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "/bin/bash"
+  },
 
-    // lock down to a specific Codespaces machine type
-    "customizations": {
+  // Optionally specify a default 2-core machine (basicLinux) in Codespaces
+  "customizations": {
     "codespaces": {
       "defaultMachine": "basicLinux"
     }
   }
-    // Additional settings if you like (e.g. setting a default shell, etc.)
-    "settings": {
-        "terminal.integrated.defaultProfile.linux": "/bin/bash"
-    }
 }
