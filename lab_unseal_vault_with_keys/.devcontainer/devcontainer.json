@@ -1,7 +1,8 @@
 {
   "name": "Vault Dev Container",
   "build": {
-    "dockerfile": "Dockerfile"
+    "dockerfile": "Dockerfile",
+    "context": "." // Use the current folder as the build context
   },
 
   // Forward port 8200 to your local machine

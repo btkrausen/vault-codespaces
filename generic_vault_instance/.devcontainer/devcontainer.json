@@ -4,7 +4,8 @@
 
     // Use the Dockerfile in the same folder
     "build": {
-        "dockerfile": "Dockerfile"
+        "dockerfile": "Dockerfile",
+        "context": "." // Use the current folder as the build context
     },
 
     // Forward Vault's default port so you can reach it in the Codespace
