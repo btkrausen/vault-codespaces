@@ -19,6 +19,12 @@
     // Start Vault in dev mode once the container is up
     "postStartCommand": "vault server -dev -dev-root-token-id=root & sleep 2",
 
+    // lock down to a specific Codespaces machine type
+    "customizations": {
+    "codespaces": {
+      "defaultMachine": "basicLinux"
+    }
+  }
     // Additional settings if you like (e.g. setting a default shell, etc.)
     "settings": {
         "terminal.integrated.defaultProfile.linux": "/bin/bash"
