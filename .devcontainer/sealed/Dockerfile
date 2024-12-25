@@ -14,11 +14,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Vault (pick the version you want)
-ENV VAULT_VERSION=1.15.3
-RUN wget https://releases.hashicorp.com/vault/${VAULT_VERSION}/vault_${VAULT_VERSION}_linux_amd64.zip -O /tmp/vault.zip \
-    && unzip /tmp/vault.zip -d /usr/local/bin/ \
-    && rm /tmp/vault.zip \
-    && vault --version
+RUN vault --version
 
 # Create a non-root user for best practices in Codespaces
 RUN useradd -ms /bin/bash codespace
