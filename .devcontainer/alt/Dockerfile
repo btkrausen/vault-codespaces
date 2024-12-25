@@ -7,7 +7,6 @@ USER root
 RUN apk update && apk add --no-cache git 
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
 RUN apk add --no-cache libcap
-RUN setcap cap_ipc_lock= /usr/sbin/vault
 
 # Switch back to the vault user for best practices
 USER vault
