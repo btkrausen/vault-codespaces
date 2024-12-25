@@ -1,21 +1,16 @@
-# Use the official HashiCorp Vault image
 FROM hashicorp/vault:latest
 
-# Switch to root to install packages
+# Switch to root so we can install packages
 USER root
 
-ENV DEBIAN_FRONTEND=noninteractive
+# Update the Alpine package index and install git
+RUN apk update && apk add --no-cache git
 
-# Install Git (and clean up)
-RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
-
-# Switch back to the vault user
+# Switch back to the vault user for best practices
 USER vault
 
-# Copy the Vault config into the container
+# Vault config file, copy it in
 COPY vault.hcl /vault/config/vault.hcl
 
 # Expose Vault's default port
 EXPOSE 8200
-
-ENTRYPOINT ["vault", "server", "-config=/vault/config/vault.hcl"]
