@@ -22,14 +22,6 @@
   "customizations": {
     "vscode": {
       "extensions": ["GitHub.copilot"],
-      "settings": {
-        "workbench.editorAssociations": {
-            "*.md": "vscode.markdown.preview.editor"
-        }
-    }
-    },
-    "codespaces": {
-      "openFiles": ["README.md"]
     }
   }
 }
