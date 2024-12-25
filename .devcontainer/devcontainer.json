@@ -1,6 +1,6 @@
 // .devcontainer/devcontainer.json
 {
-  "name": "Vault Alt Config",
+  "name": "Vault Standard Config",
 
   // Use the official Vault image from Docker Hub
   "image": "hashicorp/vault:latest",
