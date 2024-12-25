@@ -4,7 +4,7 @@
     "dockerfile": "Dockerfile",
     "context": "." // Use the current folder as the build context
   },
-  "image": "https://hub.docker.com/r/hashicorp/vault:latest",
+  "image": "hashicorp/vault:latest",
 
   // Forward port 8200 to your local machine
   "forwardPorts": [8200],
