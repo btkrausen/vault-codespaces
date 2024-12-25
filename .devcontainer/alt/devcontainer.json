@@ -4,6 +4,10 @@
   // Use the official Vault image from Docker Hub
   "image": "hashicorp/vault:latest",
 
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  
   // Forward Vault's default port so you can access it in the Codespace
   "forwardPorts": [8200],
 
@@ -17,7 +21,7 @@
 
   // Run Vault as soon as the container is up
   "postStartCommand": "vault server -config=/vault/config/vault.hcl &",
-  
+
   "customizations": {
     "vscode": {
       "extensions": ["GitHub.copilot"]
