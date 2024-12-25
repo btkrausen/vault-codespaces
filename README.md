@@ -20,7 +20,7 @@ Below are a few example labs you can explore. Each link points to a specific lab
 
 | **Lab**                   | **Description**                                                         | **Link**                              |
 |---------------------------|-------------------------------------------------------------------------|---------------------------------------|
-| **Lab 1: Intro to Vault** | Learn how to verify Vault is running, check status, and basic commands. | [Open Lab 1](# "Link to Lab 1 file")  |
+| **Lab 1: Intro to Vault** | Learn how to verify Vault is running, check status, and basic commands. | [Open Lab 1](./labs/lab_1_intro_to_vault.md)  |
 | **Lab 2: Init & Unseal**  | Walk through initializing and unsealing Vault for the first time.        | [Open Lab 2](# "Link to Lab 2 file")  |
 | **Lab 3: Secrets Engine** | Practice creating, reading, updating, and deleting secrets in Vault.     | [Open Lab 3](# "Link to Lab 3 file")  |
 | **Lab 4: Policies**       | Explore how to create and apply policies to restrict access.            | [Open Lab 4](# "Link to Lab 4 file")  |
