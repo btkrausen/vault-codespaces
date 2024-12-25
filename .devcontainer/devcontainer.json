@@ -17,5 +17,14 @@
   // Let the Vault CLI know where to connect
   "remoteEnv": {
     "VAULT_ADDR": "http://127.0.0.1:8200"
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": ["GitHub.copilot"]
+    },
+    "codespaces": {
+      "openFiles": ["codespace.md"]
+    }
   }
 }
