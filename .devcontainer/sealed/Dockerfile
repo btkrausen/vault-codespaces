@@ -3,15 +3,6 @@ FROM hashicorp/vault:latest
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Install prerequisites
-RUN apt-get update && apt-get install -y \
-    wget \
-    unzip \
-    curl \
-    ca-certificates \
-    vim \
-    jq \
-    && rm -rf /var/lib/apt/lists/*
 
 # Install Vault (pick the version you want)
 RUN vault --version
