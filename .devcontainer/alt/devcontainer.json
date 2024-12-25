@@ -10,9 +10,6 @@
   // Override the default Docker command so we can run our own
   "overrideCommand": false,
 
-  // After the container starts, run Vault in dev mode
-  "postStartCommand": "vault server -config=/vault/config/vault.hcl &",
-
   // Let the Vault CLI know where to connect
   "remoteEnv": {
     "VAULT_ADDR": "http://127.0.0.1:8200"
