@@ -4,6 +4,7 @@
     "dockerfile": "Dockerfile",
     "context": "." // Use the current folder as the build context
   },
+  "image": "https://hub.docker.com/r/hashicorp/vault:latest",
 
   // Forward port 8200 to your local machine
   "forwardPorts": [8200],
@@ -25,7 +26,11 @@
   // Optionally specify a default 2-core machine (basicLinux) in Codespaces
   "customizations": {
     "codespaces": {
-      "defaultMachine": "basicLinux"
+      "defaultMachine": "basicLinux",
+      "openFiles": ["codespace.md"]
+    },
+    "vscode": {
+      "extensions": ["GitHub.copilot"]
     }
   }
 }
