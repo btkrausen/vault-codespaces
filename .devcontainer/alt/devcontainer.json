@@ -17,7 +17,8 @@
   // Let the Vault CLI know where to connect
   "remoteEnv": {
     "VAULT_ADDR": "http://127.0.0.1:8200",
-    "SKIP_SETCAP": "true"
+    "SKIP_SETCAP": "true",
+    "SKIP_CHOWN": "true"
   },
 
   // Run Vault as soon as the container is up
