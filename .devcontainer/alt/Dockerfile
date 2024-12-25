@@ -4,8 +4,10 @@ FROM hashicorp/vault:latest
 USER root
 
 # Update the Alpine package index and install git
-RUN apk update && apk add --no-cache git libcap
+RUN apk update && apk add --no-cache git 
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
+apk add --no-cache vault libcap
+setcap cap_ipc_lock= /usr/sbin/vault
 
 # Switch back to the vault user for best practices
 USER vault
