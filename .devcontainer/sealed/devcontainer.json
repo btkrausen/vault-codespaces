@@ -2,10 +2,7 @@
   "name": "Unconfigured Vault Container (Sealed)",
   "build": {
     "dockerfile": "Dockerfile",
-    "context": "." // Use the current folder as the build context
   },
-  "image": "hashicorp/vault:latest",
-
   // Forward port 8200 to your local machine
   "forwardPorts": [8200],
 

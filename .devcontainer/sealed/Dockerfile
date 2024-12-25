@@ -1,5 +1,5 @@
 # Use a lightweight Ubuntu LTS image
-FROM ubuntu:22.04
+FROM hashicorp/vault:latest
 
 ENV DEBIAN_FRONTEND=noninteractive
 
