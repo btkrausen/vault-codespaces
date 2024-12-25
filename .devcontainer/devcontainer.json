@@ -1,32 +1,21 @@
+// .devcontainer/devcontainer.json
 {
-    "name": "Standard Vault Container (Unsealed)",
+  "name": "Vault Container",
 
-    // Use the Dockerfile in the same folder
-    "build": {
-        "dockerfile": "Dockerfile",
-        "context": "." // Use the current folder as the build context
-    },
+  // Use the official Vault image from Docker Hub
+  "image": "hashicorp/vault:latest",
 
-    // Forward Vault's default port so you can reach it in the Codespace
-    "forwardPorts": [8200],
+  // Forward Vault's default port so you can access it in the Codespace
+  "forwardPorts": [8200],
 
-    // Set environment variables inside the container so Vault CLI knows where to connect
-    "remoteEnv": {
-        "VAULT_ADDR": "http://127.0.0.1:8200",
-        "VAULT_TOKEN": "root" // We'll use the root token from dev mode
-    },
+  // Override the default Docker command so we can run our own
+  "overrideCommand": false,
 
-    // Start Vault in dev mode once the container is up
-    "postStartCommand": "vault server -dev -dev-root-token-id=root & sleep 2",
+  // After the container starts, run Vault in dev mode
+  "postStartCommand": "vault server -dev -dev-root-token-id=root &",
 
-    // lock down to a specific Codespaces machine type
-    "customizations": {
-    "codespaces": {
-      "defaultMachine": "basicLinux"
-    }
+  // Let the Vault CLI know where to connect
+  "remoteEnv": {
+    "VAULT_ADDR": "http://127.0.0.1:8200"
   }
-    // Additional settings if you like (e.g. setting a default shell, etc.)
-    "settings": {
-        "terminal.integrated.defaultProfile.linux": "/bin/bash"
-    }
 }
