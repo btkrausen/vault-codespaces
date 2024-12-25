@@ -1,21 +1,24 @@
+// .devcontainer/devcontainer.json
 {
-    "name": "Vault Sealed Container",
-    // Build the container from our Dockerfile
-    "build": {
-      "dockerfile": "Dockerfile"
-    },
-    // Use the official Vault image from Docker Hub
-    "image": "hashicorp/vault:latest",
+  "name": "Vault Container",
 
-    // Forward Vault's port 8200 to your Codespace
-    "forwardPorts": [8200],
-  
-    // We don't override the command here, so it runs the ENTRYPOINT from Dockerfile
-    "overrideCommand": false,
-  
-    // Set Vault CLI environment variable for convenience
-    "remoteEnv": {
-      "VAULT_ADDR": "http://127.0.0.1:8200"
+  // Use the official Vault image from Docker Hub
+  "image": "hashicorp/vault:latest",
+
+  // Forward Vault's default port so you can access it in the Codespace
+  "forwardPorts": [8200],
+
+  // Override the default Docker command so we can run our own
+  "overrideCommand": false,
+
+  // Let the Vault CLI know where to connect
+  "remoteEnv": {
+    "VAULT_ADDR": "http://127.0.0.1:8200"
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": ["GitHub.copilot"]
     }
   }
-  
+}
