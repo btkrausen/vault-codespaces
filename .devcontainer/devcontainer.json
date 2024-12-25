@@ -18,14 +18,13 @@
   "remoteEnv": {
     "VAULT_ADDR": "http://127.0.0.1:8200"
   },
-  "remoteUser": "codespace",
 
   "customizations": {
     "vscode": {
       "extensions": ["GitHub.copilot"]
     },
     "codespaces": {
-      "openFiles": ["codespace.md"]
+      "openFiles": ["README.md"]
     }
   }
 }
