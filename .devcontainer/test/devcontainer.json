@@ -1,4 +1,3 @@
-// .devcontainer/devcontainer.json
 {
   "name": "Vault Alt Config",
 
@@ -12,7 +11,7 @@
   "overrideCommand": false,
 
   // After the container starts, run Vault in dev mode
-  "postStartCommand": "vault server -dev -dev-root-token-id=root &",
+  "postStartCommand": "vault server -config=/vault/config/vault.hcl &",
 
   // Let the Vault CLI know where to connect
   "remoteEnv": {
