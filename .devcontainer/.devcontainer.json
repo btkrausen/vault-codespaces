@@ -1,0 +1,24 @@
+// .devcontainer/devcontainer.json
+{
+  "name": "Vault Alternate Config",
+
+  // Use the official Vault image from Docker Hub
+  "image": "hashicorp/vault:latest",
+
+  // Forward Vault's default port so you can access it in the Codespace
+  "forwardPorts": [8200],
+
+  // Override the default Docker command so we can run our own
+  "overrideCommand": false,
+
+  // Let the Vault CLI know where to connect
+  "remoteEnv": {
+    "VAULT_ADDR": "http://127.0.0.1:8200"
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": ["GitHub.copilot"]
+    }
+  }
+}
