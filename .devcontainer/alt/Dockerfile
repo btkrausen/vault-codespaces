@@ -6,8 +6,6 @@ USER root
 # Update the Alpine package index and install git
 RUN apk update && apk add --no-cache git 
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
-RUN apk add libcap
-RUN setcap -r /usr/sbin/vault
 
 # Switch back to the vault user for best practices
 USER vault
