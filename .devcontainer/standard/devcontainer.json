@@ -1,7 +1,7 @@
 {
   "name": "Vault Standard",
   "build": {
-      "dockerfile": "../Dockerfile"
+    "dockerfile": "Dockerfile"
   },
   "forwardPorts": [8200],
   "customizations": {
