@@ -13,8 +13,7 @@
   "overrideCommand": false,
 
   // After the container starts, run Vault in dev mode
-  "postStartCommand": "vault server -dev -dev-root-token-id=root &",
-  
+"postStartCommand": "vault server -dev -dev-root-token-id=root & sleep 2 && export VAULT_ADDR='http://127.0.0.1:8200' && export VAULT_TOKEN='root' && vault secrets enable -path=secrets kv && vault auth enable approle"  
   // Skip setcap configuration in the container for Codespaces
   "containerEnv": {
     "SKIP_SETCAP": "true"
