@@ -1,0 +1,24 @@
+{
+  "name": "Vault Standard",
+  "build": {
+      "dockerfile": "../Dockerfile"
+  },
+  "forwardPorts": [8200],
+  "customizations": {
+      "vscode": {
+          "extensions": [
+              "hashicorp.hcl"  // Adds HCL language support
+          ]
+      }
+  },
+  "features": {
+      "ghcr.io/devcontainers/features/common-utils:2": {}
+  },
+  "containerEnv": {
+    "SKIP_SETCAP": "true"
+  },
+  "remoteEnv": {
+      "VAULT_ADDR": "http://127.0.0.1:8200",
+      "VAULT_TOKEN": "root"
+  }
+}
