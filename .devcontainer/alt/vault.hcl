@@ -6,3 +6,6 @@ listener "tcp" {
 storage "file" {
   path = "/vault/file"
 }
+
+# Disable mlock so it works in a container for lab environments
+disable_mlock = true
