@@ -21,7 +21,7 @@
   },
 
   // Run Vault as soon as the container is up
-  "postStartCommand": "vault server -config=/vault/config/vault.hcl &",
+  // "postStartCommand": "vault server -config=/vault/config/vault.hcl &",
 
   "customizations": {
     "vscode": {
