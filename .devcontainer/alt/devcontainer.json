@@ -16,6 +16,10 @@
     "VAULT_ADDR": "http://127.0.0.1:8200"
   },
 
+  "containerEnv": {
+    "SKIP_SETCAP": "true"
+  },
+
   // Run Vault as soon as the container is up
   "postStartCommand": "vault server -config=/vault/config/vault.hcl &",
 
