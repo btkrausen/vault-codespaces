@@ -3,24 +3,28 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
+  // Use the official Vault image from Docker Hub
+  "image": "hashicorp/vault:latest",
+
+  // Forward Vault's default port so you can access it in the Codespace
   "forwardPorts": [8200],
-  "customizations": {
-      "vscode": {
-          "extensions": [
-              "hashicorp.hcl"  // Adds HCL language support
-          ]
-      }
-  },
-  "features": {
-      "ghcr.io/devcontainers/features/common-utils:2": {}
-  },
+
+  // Override the default Docker command so we can run our own
+  "overrideCommand": false,
+
+  // After the container starts, run Vault in dev mode
+  "postStartCommand": "vault server -dev -dev-root-token-id=root &",
   "containerEnv": {
     "SKIP_SETCAP": "true"
   },
+  // Let the Vault CLI know where to connect
   "remoteEnv": {
-      "VAULT_ADDR": "http://127.0.0.1:8200",
-      "VAULT_TOKEN": "root"
+    "VAULT_ADDR": "http://127.0.0.1:8200"
   },
-  // After the container starts, run Vault in dev mode
-  "postStartCommand": "vault server -dev -dev-root-token-id=root &",
+
+  "customizations": {
+    "vscode": {
+      "extensions": ["GitHub.copilot"]
+    }
+  }
 }
