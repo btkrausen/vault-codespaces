@@ -31,12 +31,12 @@ vault kv get -wrap-ttl=1h -format=json secret/demo
 # Save the wrapping_token from output
 ```
 
-4. Use wrapped token to get secret:
+4. Use wrapped token to retrieve the secret:
 ```bash
 vault unwrap <wrapping_token>
 ```
 
-5. Try unwrapping again (should fail):
+5. Try unwrapping again (will fail since wrapping tokens can only be used once):
 ```bash
 vault unwrap <wrapping_token>
 ```
@@ -47,7 +47,7 @@ vault unwrap <wrapping_token>
 ```bash
 vault kv get -wrap-ttl=30s secret/demo
 sleep 31
-vault unwrap <wrapping_token>  # Should fail - expired
+vault unwrap <wrapping_token>  # Should fail as token is now expired
 ```
 
 2. Wrap specific field:
