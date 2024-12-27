@@ -101,6 +101,7 @@ vault write auth/approle/login \
 
 ## Cleanup
 ```bash
+export VAULT_TOKEN="root"
 vault auth disable approle
 vault policy delete app-policy
 ```
