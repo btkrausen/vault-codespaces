@@ -116,6 +116,8 @@ vault token create -role=app-role
 
 ## Cleanup
 ```bash
+export VAULT_TOKEN="root"
+
 # Revoke tokens
 vault token revoke <token>
 
