@@ -2,6 +2,8 @@
 
 Welcome to this GitHub Codespace, which is set up for hands-on **HashiCorp Vault** labs. In this repository, you’ll find a variety of exercises (labs) that walk you through installing, initializing, unsealing, and using Vault in different scenarios.
 
+Note: GitHub provides users with 120 hours of core hours for FREE per month. [Check your current consumption of hours here](https://github.com/settings/billing/summary#:~:text=%240.00-,Codespaces,-Included%20quotas%20reset).
+
 ## What’s Included
 
 - A **pre-configured** development container that installs and runs Vault in your Codespace.
