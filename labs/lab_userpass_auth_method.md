@@ -4,9 +4,18 @@
 
 ### Overview
 Configure and test username/password authentication.
-**Time**: 15-20 minutes
 
-### Steps
+**Time to Complete**: 15-20 minutes
+
+## How to Use This Hands-On Lab
+
+1. **Create a Codespace** from this repo (click the button below).  
+2. Once the Codespace is running, open the integrated terminal.
+3. Follow the instructions in each **lab** to complete the exercises.
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/btkrausen/vault-codespaces)
+
+## Steps
 
 1. Enable the auth method:
 ```bash

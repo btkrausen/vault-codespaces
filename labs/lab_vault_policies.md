@@ -3,12 +3,15 @@
 ## Overview
 In this lab, you will learn how to create and manage HashiCorp Vault policies. Policies are used to define what actions users and entities can perform within Vault. You'll create different types of policies and test their effectiveness using the Vault CLI.
 
-**Time to complete**: 30-45 minutes
+**Time to Complete**: 30-45 minutes
 
-## Prerequisites
-- GitHub Codespace with Vault running in dev mode
-- `vault` CLI tool (pre-installed in your Codespace)
-- Basic familiarity with Vault CLI commands
+## How to Use This Hands-On Lab
+
+1. **Create a Codespace** from this repo (click the button below).  
+2. Once the Codespace is running, open the integrated terminal.
+3. Follow the instructions in each **lab** to complete the exercises.
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/btkrausen/vault-codespaces)
 
 ## Objectives
 By completing this lab, you will learn how to:
@@ -18,7 +21,7 @@ By completing this lab, you will learn how to:
 4. Use policy path templating
 5. Understand policy precedence
 
-## Lab Steps
+## Steps
 
 ### Part 1: Creating Your First Policy
 

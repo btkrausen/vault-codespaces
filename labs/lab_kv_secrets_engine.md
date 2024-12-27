@@ -3,9 +3,17 @@
 ## Lab Overview
 Learn the differences between KV v1 and KV v2 secrets engines through hands-on practice.
 
-**Time**: 25-30 minutes
+**Time to Complete**: 25-30 minutes
 
-## Setup
+## How to Use This Hands-On Lab
+
+1. **Create a Codespace** from this repo (click the button below).  
+2. Once the Codespace is running, open the integrated terminal.
+3. Follow the instructions in each **lab** to complete the exercises.
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/btkrausen/vault-codespaces)
+
+## Steps
 
 1. Enable KV v1 and v2 engines:
 ```bash

@@ -3,13 +3,17 @@
 ## Overview
 In this lab, you'll learn the fundamental Vault CLI commands to check the status of your Vault server, view enabled features, and understand basic Vault operations.
 
-**Time to complete**: 15-20 minutes
+**Time to Complete**: 15-20 minutes
 
-## Prerequisites
-- GitHub Codespace with Vault running in dev mode
-- `vault` CLI tool (pre-installed in your Codespace)
+## How to Use This Hands-On Lab
 
-## Lab Steps
+1. **Create a Codespace** from this repo (click the button below).  
+2. Once the Codespace is running, open the integrated terminal.
+3. Follow the instructions in each **lab** to complete the exercises.
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/btkrausen/vault-codespaces)
+
+## Steps
 
 ### Part 1: Basic Server Status
 

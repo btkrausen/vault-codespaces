@@ -3,9 +3,17 @@
 ## Overview
 Learn to use Vault's Transit secrets engine for encryption operations.
 
-**Time**: 20-25 minutes
+**Time to Complete**: 20-25 minutes
 
-## Setup
+## How to Use This Hands-On Lab
+
+1. **Create a Codespace** from this repo (click the button below).  
+2. Once the Codespace is running, open the integrated terminal.
+3. Follow the instructions in each **lab** to complete the exercises.
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/btkrausen/vault-codespaces)
+
+## Steps
 
 1. Enable the Transit engine:
 ```bash

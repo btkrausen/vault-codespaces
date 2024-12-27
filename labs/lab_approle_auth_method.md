@@ -1,10 +1,20 @@
+
 # AppRole Authentication Lab
 
 ## Overview
 Learn to configure and use Vault's AppRole auth method for application authentication.
-**Time**: 20 minutes
 
-## Lab Steps
+**Time to Complete**: 20 minutes
+
+## How to Use This Hands-On Lab
+
+1. **Create a Codespace** from this repo (click the button below).  
+2. Once the Codespace is running, open the integrated terminal.
+3. Follow the instructions in each **lab** to complete the exercises.
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/btkrausen/vault-codespaces)
+
+## Steps
 
 1. Enable AppRole auth:
 ```bash
