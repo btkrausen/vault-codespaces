@@ -93,12 +93,12 @@ vault write transit/keys/my-app-2 \
 
 1. Generate data key:
 ```bash
-vault write transit/datakey/plaintext/my-app
+vault write -f transit/datakey/plaintext/my-app
 ```
 
 2. Generate wrapped data key:
 ```bash
-vault write transit/datakey/wrapped/my-app
+vault write -f transit/datakey/wrapped/my-app
 ```
 
 ## Challenge Exercise
