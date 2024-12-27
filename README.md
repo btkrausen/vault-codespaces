@@ -24,7 +24,7 @@ Below are a few example labs you can explore. Each link points to a specific lab
 
 | **Lab**                      | **Description**                                                      | **Link**                                     |
 | ---------------------------- | -------------------------------------------------------------------- | -------------------------------------------- |
-| **Intro to Vault**           | Learn to verify Vault is running, check status, and basic commands.  | [Open](./labs/lab_1_intro_to_vault.md)       |
+| **Intro to Vault**           | Learn to verify Vault is running, check status, and basic commands.  | [Open](./labs/lab_intro_to_vault.md)       |
 | **Vault Tokens**             | Learn the basics of using Vault tokens to authenticate.              | [Open](./labs/lab_vault_tokens.md)           |
 | **Vault Response Wrapping**  | Use Response Wrapping to protect secrets                             | [Open](./labs/lab_response_wrapping.md)      |
 | **AppRole Auth Method**      | Enable, configure, and use the AppRole Auth Method                   | [Open](./labs/lab_approle_auth_method.md)    |
