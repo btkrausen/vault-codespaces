@@ -12,27 +12,27 @@ Welcome to this GitHub Codespace, which is set up for hands-on **HashiCorp Vault
 
 ## How to Use
 
-1. **Create a Codespace** from this repo (click the button below or go to the “Code” drop-down, select “Codespaces,” and create a new one).  
+1. **Create a Codespace** from this repo (click the button below or go to the “Code” drop-down, select “Codespaces,” and create a new one).
 2. Once the Codespace is running, open the integrated terminal.
 3. Follow the instructions in each **lab** to complete the exercises.
 
- [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/btkrausen/vault-codespaces)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/btkrausen/vault-codespaces)
 
 ## Labs Overview
 
 Below are a few example labs you can explore. Each link points to a specific lab file or folder within this repository. Feel free to modify or add more labs as you see fit.
 
-| **Lab**                   | **Description**                                                         | **Link**                              |
-|---------------------------|-------------------------------------------------------------------------|---------------------------------------|
-| **Lab: Intro to Vault** | Learn how to verify Vault is running, check status, and basic commands. | [Open Lab](./labs/lab_1_intro_to_vault.md)  |
-| **Lab: Vault Tokens**  | Learn the basics of using Vault tokens to authenticate.        | [Open Lab](./labs/lab_vault_tokens.md)  |
-| **Lab: Vault Response Wrapping**  | Use Response Wrapping to protect secrets        | [Open Lab](./labs/lab_response_wrapping.md)  |
-| **Lab: AppRole Auth Method** | Enable, configure, and use the AppRole Auth Method     | [Open Lab](./labs/lab_approle_auth_method.md)  |
-| **Lab: Userpass Auth Method** | Configure the Userpass Auth Method     | [Open Lab](./labs/lab_userpass_auth_method.md)  |
-| **Lab: Kubernetes Auth Method** | Learn how to enable and configure the k8s auth method     | [Open Lab](./labs/lab_kubernetes_auth_method.md)  |
-| **Lab: Key/Value Secrets Engine** | Practice creating, reading, updating, and deleting secrets in Vault.     | [Open Lab](./labs/lab_kv_secrets_engine.md)  |
-| **Lab: Transit Secrets Engine** | Learn how to encrypt data using HashiCorp Vault     | [Open Lab](./labs/lab_transit_secrets_engine.md)  |
-| **Lab: Vault Policies**       | Explore how to create and apply policies to restrict access.            | [Open Lab](./labs/lab_vault_policies.md)  |
+| **Lab**                      | **Description**                                                      | **Link**                                     |
+| ---------------------------- | -------------------------------------------------------------------- | -------------------------------------------- |
+| **Intro to Vault**           | Learn to verify Vault is running, check status, and basic commands.  | [Open](./labs/lab_1_intro_to_vault.md)       |
+| **Vault Tokens**             | Learn the basics of using Vault tokens to authenticate.              | [Open](./labs/lab_vault_tokens.md)           |
+| **Vault Response Wrapping**  | Use Response Wrapping to protect secrets                             | [Open](./labs/lab_response_wrapping.md)      |
+| **AppRole Auth Method**      | Enable, configure, and use the AppRole Auth Method                   | [Open](./labs/lab_approle_auth_method.md)    |
+| **Userpass Auth Method**     | Configure the Userpass Auth Method                                   | [Open](./labs/lab_userpass_auth_method.md)   |
+| **Kubernetes Auth Method**   | Learn how to enable and configure the k8s auth method                | [Open](./labs/lab_kubernetes_auth_method.md) |
+| **Key/Value Secrets Engine** | Practice creating, reading, updating, and deleting secrets in Vault. | [Open](./labs/lab_kv_secrets_engine.md)      |
+| **Transit Secrets Engine**   | Learn how to encrypt data using HashiCorp Vault                      | [Open](./labs/lab_transit_secrets_engine.md) |
+| **Vault Policies**           | Explore how to create and apply policies to restrict access.         | [Open](./labs/lab_vault_policies.md)         |
 
 ---
 
