@@ -10,9 +10,11 @@ Welcome to this GitHub Codespace, which is set up for hands-on **HashiCorp Vault
 
 ## How to Use
 
-1. **Create a Codespace** from this repo (go to the “Code” drop-down, select “Codespaces,” and create a new one).  
+1. **Create a Codespace** from this repo (click the button below or go to the “Code” drop-down, select “Codespaces,” and create a new one).  
 2. Once the Codespace is running, open the integrated terminal.
 3. Follow the instructions in each **lab** to complete the exercises.
+
+ [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/btkrausen/vault-codespaces)
 
 ## Labs Overview
 
