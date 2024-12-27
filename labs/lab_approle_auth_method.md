@@ -16,7 +16,7 @@ Learn to configure and use Vault's AppRole auth method for application authentic
 
 ## Steps
 
-1. Enable AppRole auth:
+1. Enable AppRole auth if not yet enabled:
 ```bash
 vault auth enable approle
 ```
@@ -49,14 +49,19 @@ vault read auth/approle/role/my-app/role-id
 vault write -f auth/approle/role/my-app/secret-id
 ```
 
-6. Login using AppRole:
+6. Write a secret to use for testing:
+```bash
+vault kv put secret/app/config db_conn=prod-db.krausen.io:3306
+```
+
+7. Login using AppRole:
 ```bash
 vault write auth/approle/login \
     role_id="<role_id>" \
     secret_id="<secret_id>"
 ```
 
-7. Test access with token:
+8. Test access with token:
 ```bash
 # Store token
 export VAULT_TOKEN="<token from login>"
