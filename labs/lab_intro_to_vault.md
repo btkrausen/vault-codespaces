@@ -104,11 +104,13 @@ vault token create -ttl=1h
 
 1. Use JSON format for secret data:
 ```bash
-vault kv put secret/user @- <<EOF
+vault kv put secret/user - <<EOF
 {
-  "username": "admin",
-  "password": "secret",
-  "email": "admin@example.com"
+  "data": {
+    "username": "admin",
+    "password": "secret",
+    "email": "admin@example.com"
+  }
 }
 EOF
 ```
