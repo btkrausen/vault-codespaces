@@ -2,8 +2,9 @@
 [![Udemy](https://img.shields.io/badge/Udemy-A435F0?style=for-the-badge&logo=Udemy&logoColor=white)](https://btk.me/vb) [![Github Sponsor](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#EA4AAA)](https://github.com/sponsors/btkrausen?frequency=one-time&sponsor=btkrausen)
 
 # HashiCorp Vault Labs
+[![Bryan Krausen - badge-generator](https://img.shields.io/static/v1?label=btkrausen&message=Profile&color=blue&logo=github)](https://github.com/btkrausen)
 
-Welcome to this GitHub rep, which is set up for hands-on **HashiCorp Vault** labs using GitHub Codespaces. In this repository, you’ll find a variety of [labs](./labs) that walk you through using Vault in different scenarios.
+Welcome to this HashiCorp Vault lab repo, where you can get hands-on experience with **HashiCorp Vault** using GitHub Codespaces. In this repository, you’ll find a variety of [labs](./labs) that walk you through using HashiCorp Vault in different scenarios.
 
 **Note:** GitHub provides users with 120 core hours for FREE per month. [Check your current consumption of hours here](https://github.com/settings/billing/summary#:~:text=%240.00-,Codespaces,-Included%20quotas%20reset). Additionally, you can [set a limit of spending for Codespaces on your account here](https://github.com/settings/billing/spending_limit#:~:text=Spending%20limit%20alerts-,Codespaces,-Limit%20spending).
 
