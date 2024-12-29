@@ -3,15 +3,21 @@
 
 # HashiCorp Vault Labs
 
-Welcome to this GitHub Codespace, which is set up for hands-on **HashiCorp Vault** labs. In this repository, you’ll find a variety of exercises (labs) that walk you through installing, initializing, unsealing, and using Vault in different scenarios.
+Welcome to this GitHub rep, which is set up for hands-on **HashiCorp Vault** labs using GitHub Codespaces. In this repository, you’ll find a variety of [labs](./labs) that walk you through using Vault in different scenarios.
 
-**Note:** GitHub provides users with 120 hours of core hours for FREE per month. [Check your current consumption of hours here](https://github.com/settings/billing/summary#:~:text=%240.00-,Codespaces,-Included%20quotas%20reset). Additionally, you can [set a limit of spend for Codespaces on your account here](https://github.com/settings/billing/spending_limit#:~:text=Spending%20limit%20alerts-,Codespaces,-Limit%20spending).
+**Note:** GitHub provides users with 120 core hours for FREE per month. [Check your current consumption of hours here](https://github.com/settings/billing/summary#:~:text=%240.00-,Codespaces,-Included%20quotas%20reset). Additionally, you can [set a limit of spending for Codespaces on your account here](https://github.com/settings/billing/spending_limit#:~:text=Spending%20limit%20alerts-,Codespaces,-Limit%20spending).
 
 ## What’s Included
 
 - A **pre-configured** development container that installs and runs Vault in your Codespace.
 - Multiple labs, each with its own `README.md` and step-by-step instructions.
 - Example files, scripts, and configurations to help you practice Vault’s core features.
+
+### Built with:
+<a href="https://www.vaultproject.io/">
+  <img alt="vault" src="https://img.shields.io/badge/Vault-FFD814?style=for-the-badge&logo=Vault&logoColor=black" width="80" height="30" /> <a href="https://github.com/features/codespaces">
+  <img alt="Codespaces" src="https://img.shields.io/badge/GitHub-%23121011.svg?style=flat-square&logo=Github&logoColor=white" width="100" height="30" />
+</a>
 
 ## How to Use
 
