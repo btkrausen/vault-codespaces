@@ -2,7 +2,7 @@
 FROM hashicorp/vault:latest
 
 # Install git
-RUN apk add --no-cache git jq
+RUN apk add --no-cache git jq logrotate
 
 # Set environment variables for dev mode
 ENV VAULT_DEV_ROOT_TOKEN_ID=root
