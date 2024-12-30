@@ -34,7 +34,7 @@ Below are a few example labs you can explore. Each link points to a specific lab
 
 | **Lab**                      | **Description**                                                      | **Link**                                     |
 | ---------------------------- | -------------------------------------------------------------------- | -------------------------------------------- |
-| **Intro to Vault**           | Learn to verify Vault is running, check status, and basic commands.  | [Open](./labs/lab_intro_to_vault.md)       |
+| **Intro to Vault**           | Learn to verify Vault is running, check status, and basic commands.  | [Open](./labs/lab_intro_to_vault.md)         |
 | **Vault Tokens**             | Learn the basics of using Vault tokens to authenticate.              | [Open](./labs/lab_vault_tokens.md)           |
 | **Vault Response Wrapping**  | Use Response Wrapping to protect secrets                             | [Open](./labs/lab_response_wrapping.md)      |
 | **AppRole Auth Method**      | Enable, configure, and use the AppRole Auth Method                   | [Open](./labs/lab_approle_auth_method.md)    |
@@ -43,6 +43,8 @@ Below are a few example labs you can explore. Each link points to a specific lab
 | **Key/Value Secrets Engine** | Practice creating, reading, updating, and deleting secrets in Vault. | [Open](./labs/lab_kv_secrets_engine.md)      |
 | **Transit Secrets Engine**   | Learn how to encrypt data using HashiCorp Vault                      | [Open](./labs/lab_transit_secrets_engine.md) |
 | **Vault Policies**           | Explore how to create and apply policies to restrict access.         | [Open](./labs/lab_vault_policies.md)         |
+| **Vault Audit Devices**      | Enable and configure an audit device. View and rotate logs.          | [Open](./labs/lab_audit_devices.md)          |
+
 
 ---
 
