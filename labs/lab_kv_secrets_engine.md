@@ -5,6 +5,8 @@ Learn the differences between KV v1 and KV v2 secrets engines through hands-on p
 
 **Time to Complete**: 25-30 minutes
 
+**Preview Mode**: Use `Cmd/Ctrl + Shift + V` in VSCode to see a nicely formatted version of this lab!
+
 ## How to Use This Hands-On Lab
 
 1. **Create a Codespace** from this repo (click the button below).  

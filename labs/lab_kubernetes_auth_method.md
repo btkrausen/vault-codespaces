@@ -5,6 +5,8 @@ Configure and test Kubernetes authentication using a mock setup.
 
 **Time to Complete**: 20-25 minutes
 
+**Preview Mode**: Use `Cmd/Ctrl + Shift + V` in VSCode to see a nicely formatted version of this lab!
+
 ## How to Use This Hands-On Lab
 
 1. **Create a Codespace** from this repo (click the button below).  

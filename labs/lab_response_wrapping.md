@@ -5,6 +5,8 @@ Learn how to create and use response wrapping tokens to securely share Vault sec
 
 **Time to Complete**: 10 minutes
 
+**Preview Mode**: Use `Cmd/Ctrl + Shift + V` in VSCode to see a nicely formatted version of this lab!
+
 ## How to Use This Hands-On Lab
 
 1. **Create a Codespace** from this repo (click the button below).  

@@ -5,6 +5,8 @@ In this lab, you'll learn the fundamental Vault CLI commands to check the status
 
 **Time to Complete**: 15-20 minutes
 
+**Preview Mode**: Use `Cmd/Ctrl + Shift + V` in VSCode to see a nicely formatted version of this lab!
+
 ## How to Use This Hands-On Lab
 
 1. **Create a Codespace** from this repo (click the button below).  

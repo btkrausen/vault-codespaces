@@ -5,6 +5,8 @@ In this lab, you will learn how to create and manage HashiCorp Vault policies. P
 
 **Time to Complete**: 30-45 minutes
 
+**Preview Mode**: Use `Cmd/Ctrl + Shift + V` in VSCode to see a nicely formatted version of this lab!
+
 ## How to Use This Hands-On Lab
 
 1. **Create a Codespace** from this repo (click the button below).  
