@@ -33,7 +33,7 @@ Welcome to this HashiCorp Vault lab repo, where you can get hands-on experience 
 
 ## Labs Overview
 
-Below are a few example labs you can explore. Each link points to a specific lab file or folder within this repository. Feel free to modify or add more labs as you see fit.
+Below are a few example labs you can explore. Each link points to a specific lab file or folder within this repository.
 
 | **Lab**                          | **Description**                                                      | **Link**                                            |
 | -------------------------------- | -------------------------------------------------------------------- | --------------------------------------------------- |
