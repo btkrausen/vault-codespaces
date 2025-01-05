@@ -211,7 +211,7 @@ terraform output dev_api_key
 terraform output prod_api_key
 ```
 
-### Congrats, you've successfully integrated HashiCorp Terraform and Vault. Terraform was able to obtain secrets from Vault to use within the Terraform configuration.
+### 🎉 Congrats, you've successfully integrated HashiCorp Terraform and Vault. Terraform was able to obtain secrets from Vault to use within the Terraform configuration.
 
 ## Challenge Exercises
 
@@ -225,28 +225,33 @@ terraform output prod_api_key
 
 ## Clean Up
 
-1. Revoke the Terraform token:
+1. Unset the VAULT_TOKEN environment variable
+```bash
+unset VAULT_TOKEN
+```
+
+2. Revoke the Terraform token:
 ```bash
 vault token revoke <your-terraform-token>
 ```
 
-2. Delete the policy:
+3. Delete the policy:
 ```bash
 vault policy delete terraform
 ```
 
-3. Destroy the Terraform resources:
+4. Destroy the Terraform resources:
 ```bash
 terraform destroy
 ```
 
-4. Delete the secrets from Vault:
+5. Delete the secrets from Vault:
 ```bash
 vault kv delete kv/database/config
 vault kv delete kv/api/keys
 ```
 
-5. Disable the KV secrets engine:
+6. Disable the KV secrets engine:
 ```bash
 vault secrets disable kv
 ```
