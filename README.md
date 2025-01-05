@@ -35,19 +35,19 @@ Welcome to this HashiCorp Vault lab repo, where you can get hands-on experience 
 
 Below are a few example labs you can explore. Each link points to a specific lab file or folder within this repository. Feel free to modify or add more labs as you see fit.
 
-| **Lab**                            | **Description**                                                      | **Link**                                            |
-| ---------------------------------- | -------------------------------------------------------------------- | --------------------------------------------------- |
-| **Intro to Vault**                 | Learn to verify Vault is running, check status, and basic commands.  | [Open](./labs/lab_intro_to_vault.md)                |
-| **Vault Tokens**                   | Learn the basics of using Vault tokens to authenticate.              | [Open](./labs/lab_vault_tokens.md)                  |
-| **Vault Response Wrapping**        | Use Response Wrapping to protect secrets                             | [Open](./labs/lab_response_wrapping.md)             |
-| **AppRole Auth Method**            | Enable, configure, and use the AppRole Auth Method                   | [Open](./labs/lab_approle_auth_method.md)           |
-| **Userpass Auth Method**           | Configure the Userpass Auth Method                                   | [Open](./labs/lab_userpass_auth_method.md)          |
-| **Kubernetes Auth Method**         | Learn how to enable and configure the k8s auth method                | [Open](./labs/lab_kubernetes_auth_method.md)        |
-| **Key/Value Secrets Engine**       | Practice creating, reading, updating, and deleting secrets in Vault. | [Open](./labs/lab_kv_secrets_engine.md)             |
-| **Transit Secrets Engine**         | Learn how to encrypt data using HashiCorp Vault                      | [Open](./labs/lab_transit_secrets_engine.md)        |
-| **Vault Policies**                 | Explore how to create and apply policies to restrict access.         | [Open](./labs/lab_vault_policies.md)                |
-| **Vault Audit Devices**            | Enable and configure an audit device. View and rotate logs.          | [Open](./labs/lab_audit_devices.md)                 |
-| **Integrate Vault with Terraform** | Learn how to query Vault for secrets using HashiCorp Terraform       | [Open](./labs/lab_integrate_terraform_and_vault.md) |
+| **Lab**                          | **Description**                                                      | **Link**                                            |
+| -------------------------------- | -------------------------------------------------------------------- | --------------------------------------------------- |
+| **Intro to Vault**               | Learn to verify Vault is running, check status, and basic commands.  | [Open](./labs/lab_intro_to_vault.md)                |
+| **Vault Tokens**                 | Learn the basics of using Vault tokens to authenticate.              | [Open](./labs/lab_vault_tokens.md)                  |
+| **Vault Response Wrapping**      | Use Response Wrapping to protect secrets                             | [Open](./labs/lab_response_wrapping.md)             |
+| **AppRole Auth Method**          | Enable, configure, and use the AppRole Auth Method                   | [Open](./labs/lab_approle_auth_method.md)           |
+| **Userpass Auth Method**         | Configure the Userpass Auth Method                                   | [Open](./labs/lab_userpass_auth_method.md)          |
+| **Kubernetes Auth Method**       | Learn how to enable and configure the k8s auth method                | [Open](./labs/lab_kubernetes_auth_method.md)        |
+| **Key/Value Secrets Engine**     | Practice creating, reading, updating, and deleting secrets in Vault. | [Open](./labs/lab_kv_secrets_engine.md)             |
+| **Transit Secrets Engine**       | Learn how to encrypt data using HashiCorp Vault                      | [Open](./labs/lab_transit_secrets_engine.md)        |
+| **Vault Policies**               | Explore how to create and apply policies to restrict access.         | [Open](./labs/lab_vault_policies.md)                |
+| **Vault Audit Devices**          | Enable and configure an audit device. View and rotate logs.          | [Open](./labs/lab_audit_devices.md)                 |
+| **Integrate Vault w/ Terraform** | Learn how to query Vault for secrets using HashiCorp Terraform       | [Open](./labs/lab_integrate_terraform_and_vault.md) |
 
 ---
 
