@@ -21,6 +21,10 @@ Learn different token types and their management in Vault.
 
 1. Create basic service token:
 ```bash
+# Log in with a valid token
+vault login root
+
+# Create a token
 vault token create
 ```
 

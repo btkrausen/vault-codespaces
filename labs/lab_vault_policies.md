@@ -29,6 +29,10 @@ By completing this lab, you will learn how to:
 
 1. First, verify that Vault is running and you're authenticated:
 ```bash
+# Log in with a valid token
+vault login root
+
+# Check the status of the service
 vault status
 ```
 

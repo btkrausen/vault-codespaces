@@ -44,6 +44,10 @@ echo "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6I
 
 2. Enable auth method:
 ```bash
+# Log in with a valid token
+vault login root
+
+# Enable the Kubernetes auth method
 vault auth enable kubernetes
 ```
 

@@ -19,6 +19,10 @@ Learn to use Vault's Transit secrets engine for encryption operations.
 
 1. Enable the Transit engine:
 ```bash
+# Log in with a valid token
+vault login root
+
+# Enable the Transit secrets engine
 vault secrets enable transit
 ```
 

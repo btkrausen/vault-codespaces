@@ -19,6 +19,10 @@ Learn the differences between KV v1 and KV v2 secrets engines through hands-on p
 
 1. Enable KV v1 and v2 engines:
 ```bash
+# Log in with a valid token
+vault login root
+
+# Enable the secrets engines
 vault secrets enable -path=kv1 -version=1 kv
 vault secrets enable -path=kv2 -version=2 kv
 ```

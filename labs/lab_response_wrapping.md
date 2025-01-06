@@ -19,6 +19,10 @@ Learn how to create and use response wrapping tokens to securely share Vault sec
 
 1. Create a secret:
 ```bash
+# Log in with a valid token
+vault login root
+
+# Create the secret
 vault kv put secret/demo username=admin password=secret123
 ```
 

@@ -21,6 +21,10 @@ Configure and test username/password authentication.
 
 1. Enable the auth method:
 ```bash
+# Log in with a valid token
+vault login root
+
+# Enable the auth method
 vault auth enable userpass
 ```
 

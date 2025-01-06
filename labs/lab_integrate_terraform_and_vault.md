@@ -21,7 +21,10 @@ In this lab, you will learn how to integrate HashiCorp Vault with Terraform usin
 
 1. Open your terminal, authenticate, and verify Vault is running in dev mode:
 ```bash
+# Log in with a valid token
 vault login root
+
+# Check the status of Vault
 vault status
 ```
 
