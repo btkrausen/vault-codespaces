@@ -20,7 +20,11 @@ Learn to configure and use Vault's AppRole auth method for application authentic
 
 1. Enable AppRole auth if not yet enabled:
 ```bash
-vault auth enable approle
+# Log in with a valid token
+vault login root
+
+# Validate that AppRole is already enabled at the approle/ path
+vault auth list
 ```
 
 2. Create policy for the app:
