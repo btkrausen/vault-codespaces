@@ -1,32 +1,16 @@
 {
-  "name": "Vault Standard",
+  "name": "Vault Install",
   "build": {
     "dockerfile": "Dockerfile"
   },
-  // Use the official Vault image from Docker Hub
-  "image": "hashicorp/vault:latest",
-
-  // Forward Vault's default port so you can access it in the Codespace
-  "forwardPorts": [8200],
-
-  // Override the default Docker command so we can run our own
-  "overrideCommand": false,
-
-  // After the container starts, run Vault in dev mode
-  "postStartCommand": "vault server -dev -dev-root-token-id=root & sleep 2 && export VAULT_ADDR='http://127.0.0.1:8200' && export VAULT_TOKEN='root' && vault secrets enable -path=secrets kv && vault auth enable approle",
-  // Skip setcap configuration in the container for Codespaces
-  "containerEnv": {
-    "SKIP_SETCAP": "true"
-  },
-  // Let the Vault CLI know where to connect
-  "remoteEnv": {
-    "VAULT_ADDR": "http://127.0.0.1:8200"
-  },
-
-  // Install the HashiCorp Terraform extension for VS Code
   "customizations": {
     "vscode": {
-      "extensions": ["hashicorp.hcl"]
+      "extensions": ["hashicorp.hcl"],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
     }
-  }
+  },
+  "remoteUser": "vaultuser",
+  "postCreateCommand": "sudo apt-get update"
 }
