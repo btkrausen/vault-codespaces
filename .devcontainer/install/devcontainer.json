@@ -1,0 +1,16 @@
+{
+  "name": "Vault Install",
+  "build": {
+    "dockerfile": "Dockerfile",
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["hashicorp.hcl"],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+  "remoteUser": "vaultuser",
+  "postCreateCommand": "sudo dnf update -y"
+}
