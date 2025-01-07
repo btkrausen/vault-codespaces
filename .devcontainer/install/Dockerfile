@@ -1,19 +1,22 @@
-FROM rockylinux:9
+FROM ubuntu:22.04
+
+# Avoid prompts during package installation
+ENV DEBIAN_FRONTEND=noninteractive
 
 # Install necessary packages
-RUN dnf update -y && \
-    dnf install -y \
-    wget \
-    yum-utils \
-    unzip \
-    sudo \
-    vim \
-    tar \
+RUN apt-get update && apt-get install -y \
+    curl \
+    gpg \
+    lsb-release \
     jq \
-    which \
+    vim \
+    sudo \
+    wget \
+    unzip \
     git \
-    && dnf clean all
+    software-properties-common \
+    && rm -rf /var/lib/apt/lists/*
 
-# Setup non-root user with sudo access
+# Create non-root user
 RUN useradd -m -s /bin/bash vaultuser && \
     echo "vaultuser ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
