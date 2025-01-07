@@ -52,16 +52,16 @@ sudo chown -R vault:vault /var/lib/vault
 1. Download and install Vault:
 ```bash
 # Download latest version of Vault
-wget https://releases.hashicorp.com/vault/1.15.6/vault_1.15.6_linux_amd64.zip
+wget https://releases.hashicorp.com/vault/1.18.3/vault_1.18.3_linux_amd64.zip
 
 # Unzip the package
-sudo unzip vault_1.15.6_linux_amd64.zip -d /usr/local/bin/
+sudo unzip vault_1.18.3_linux_amd64.zip -d /usr/local/bin/
 
 # Set ownership
 sudo chown vault:vault /usr/local/bin/vault
 
 # Clean up
-rm vault_1.15.6_linux_amd64.zip
+rm vault_1.18.3_linux_amd64.zip
 ```
 
 2. Verify the installation:
@@ -104,8 +104,7 @@ sudo chown -R vault:vault /etc/vault.d/vault.hcl
 # Switch to vault user
 sudo -u vault /usr/local/bin/vault server -config=/etc/vault.d/vault.hcl &
 
-# Save the process ID for later
-echo $! > /tmp/vault.pid
+# Press <Enter> to get the command prompt back
 ```
 
 2. Set environment variable:
@@ -116,13 +115,15 @@ export VAULT_ADDR='http://127.0.0.1:8200'
 3. Verify Vault is running:
 ```bash
 # Check if Vault is responding
-curl http://127.0.0.1:8200/v1/sys/health
+curl http://127.0.0.1:8200/v1/sys/health | jq
 ```
 
 4. Verify Vault is running and unsealed:
 ```bash
 vault status
 ```
+
+## 🚀 Congrats, you've successfully installed HashiCorp Vault manually
 
 ## ❗ Important Notes
 
