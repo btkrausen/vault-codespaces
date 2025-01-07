@@ -1,7 +1,7 @@
 {
   "name": "Vault Install",
   "build": {
-    "dockerfile": "Dockerfile"
+    "dockerfile": "Dockerfile",
   },
   "customizations": {
     "vscode": {
@@ -12,5 +12,5 @@
     }
   },
   "remoteUser": "vaultuser",
-  "postCreateCommand": "sudo apt-get update"
+  "postCreateCommand": "sudo dnf update -y"
 }
