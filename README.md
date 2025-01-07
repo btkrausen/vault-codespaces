@@ -37,6 +37,7 @@ Below are a few example labs you can explore. Each link points to a specific lab
 
 | **Lab**                          | **Description**                                                      | **Link**                                            |
 | -------------------------------- | -------------------------------------------------------------------- | --------------------------------------------------- |
+| **Install Vault (Manually)**     | Install Vault from Scratch and Start the Service                     | [Open](./labs/lab_install_vault_manually.md)        |
 | **Intro to Vault**               | Learn to verify Vault is running, check status, and basic commands.  | [Open](./labs/lab_intro_to_vault.md)                |
 | **Using the Vault UI**           | Configure and Manage Vault using the User Interface (UI)             | [Open](./labs/lab_vault_ui.md)                      |
 | **Using the Vault CLI**          | Practice mananaging Vault using the built-in CLI                     | [Open](./labs/lab_vault_cli.md)                     |
