@@ -39,7 +39,7 @@ Below are a few example labs you can explore. Each link points to a specific lab
 | -------------------------------- | -------------------------------------------------------------------- | --------------------------------------------------- |
 | **Intro to Vault**               | Learn to verify Vault is running, check status, and basic commands.  | [Open](./labs/lab_intro_to_vault.md)                |
 | **Using the Vault UI**           | Configure and Manage Vault using the User Interface (UI)             | [Open](./labs/lab_vault_ui.md)                      |
-| **Using the Vault CLI **         | Practice mananaging Vault using the built-in CLI                     | [Open](./labs/lab_vault_cli.md)                     |
+| **Using the Vault CLI**          | Practice mananaging Vault using the built-in CLI                     | [Open](./labs/lab_vault_cli.md)                     |
 | **Vault Tokens**                 | Learn the basics of using Vault tokens to authenticate.              | [Open](./labs/lab_vault_tokens.md)                  |
 | **Vault Response Wrapping**      | Use Response Wrapping to protect secrets                             | [Open](./labs/lab_response_wrapping.md)             |
 | **AppRole Auth Method**          | Enable, configure, and use the AppRole Auth Method                   | [Open](./labs/lab_approle_auth_method.md)           |
