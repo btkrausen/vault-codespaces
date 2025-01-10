@@ -2,7 +2,7 @@
 FROM hashicorp/vault:latest
 
 # Install git
-RUN apk add --no-cache git jq logrotate
+RUN apk add --no-cache git jq logrotate openssl
 
 # Download and install latest Terraform
 RUN apk add --no-cache curl unzip && \
@@ -15,6 +15,8 @@ RUN apk add --no-cache curl unzip && \
 # Set environment variables for dev mode
 ENV VAULT_DEV_ROOT_TOKEN_ID=root
 ENV VAULT_DEV_LISTEN_ADDRESS=0.0.0.0:8200
+
+CMD ["server", "-dev", "-dev-root-token-id=root"]
 
 # Expose the default Vault port
 EXPOSE 8200
