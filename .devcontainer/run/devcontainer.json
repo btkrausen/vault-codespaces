@@ -1,0 +1,21 @@
+{
+  "name": "Vault Run",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["hashicorp.hcl"],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+  "remoteUser": "vaultuser",
+  "remoteEnv": {
+    "VAULT_ADDR": "http://127.0.0.1:8200"
+  },
+  "postCreateCommand": "/usr/local/bin/start-vault.sh & sleep 5",
+  "forwardPorts": [8200]
+}
