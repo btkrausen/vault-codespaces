@@ -27,7 +27,7 @@ RUN sudo useradd -r -m -g vault -d /home/vault -s /bin/bash -c "Vault user" vaul
 COPY vault.hcl /etc/vault.d/
 
 RUN mkdir -p /opt/vault/data /etc/vault.d /var/lib/vault /usr/local/bin && \
-    chown -R vault:vault /opt/vault /etc/vault.d /var/lib/vault && \
+    chown -R vauluser:vaultuser /opt/vault /etc/vault.d /var/lib/vault && \
     chmod 640 /etc/vault.d/vault.hcl
 
 # Download and install Vault
