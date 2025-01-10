@@ -2,7 +2,7 @@
 export VAULT_ADDR='http://127.0.0.1:8200'
 
 # Start Vault in background
-vault server -config=/etc/vault.d/vault-config.hcl > /tmp/vault.log 2>&1 &
+vault server -config=/etc/vault.d/vault.hcl > /tmp/vault.log 2>&1 &
 
 # Wait for Vault to start
 sleep 5

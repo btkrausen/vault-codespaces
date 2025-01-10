@@ -20,21 +20,21 @@ RUN apt-get update && apt-get install -y \
 
 # Create non-root user
 RUN useradd -m -s /bin/bash vaultuser && \
-    echo "vaultuser ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+    echo "vaultuser ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers && sudo groupadd vault
+
+RUN sudo useradd -r -m -g vault -d /home/vault -s /bin/bash -c "Vault user" vault
+
+RUN mkdir -p /opt/vault/data /etc/vault.d /var/lib/vault /usr/local/bin && \
+    chown -R vault:vault /opt/vault /etc/vault.d /var/lib/vault && \
+    chmod 640 /etc/vault.d/vault.hcl
 
 # Download and install Vault
-RUN wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg && \
-    echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/hashicorp.list && \
-    apt-get update && apt-get install -y vault
-
-# Create Vault directories
-RUN mkdir -p /opt/vault/data /etc/vault.d && \
-    chown -R vaultuser:vaultuser /opt/vault /etc/vault.d
-
-# Create Vault configuration
-COPY vault.hcl /etc/vault.d/
-RUN chown vaultuser:vaultuser /etc/vault.d/vault.hcl && \
-    chmod 640 /etc/vault.d/vault.hcl
+RUN wget https://releases.hashicorp.com/vault/1.18.3/vault_1.18.3_linux_amd64.zip && \
+    unzip vault_1.18.3_linux_amd64.zip && \
+    mv vault /usr/local/bin/ && \
+    chown vaultuser:vaultuser /usr/local/bin/vault && \
+    chmod 750 /usr/local/bin/vault && \
+    rm vault_1.18.3_linux_amd64.zip
 
 # Create startup script
 COPY start-vault.sh /usr/local/bin/
