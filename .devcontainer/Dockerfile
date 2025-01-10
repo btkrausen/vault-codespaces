@@ -2,7 +2,7 @@
 FROM hashicorp/vault:latest
 
 # Install git
-RUN apk add --no-cache git jq logrotate
+RUN apk add --no-cache git jq logrotate openssl
 
 # Download and install latest Terraform
 RUN apk add --no-cache curl unzip && \

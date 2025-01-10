@@ -17,6 +17,7 @@
   },
     // After the container starts, run Vault in dev mode
     "postStartCommand": "vault server -dev -dev-root-token-id=root & sleep 2 && vault secrets enable -path=secrets kv && vault auth enable approle",
+    
     // Skip setcap configuration in the container for Codespaces
     "containerEnv": {
       "SKIP_SETCAP": "true"
