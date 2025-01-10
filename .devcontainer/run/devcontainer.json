@@ -1,4 +1,3 @@
-# devcontainers.json
 {
   "name": "Vault Run",
   "build": {
