@@ -11,6 +11,5 @@
       }
     }
   },
-  "remoteUser": "vaultuser",
   "postCreateCommand": "sudo apt-get update"
 }
