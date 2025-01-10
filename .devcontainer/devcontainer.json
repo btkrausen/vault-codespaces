@@ -11,5 +11,5 @@
       }
     }
   },
-  "postCreateCommand": "sudo apt-get update"
+  "postCreateCommand": "vault server -dev -dev-root-token-id=root &"
 }
