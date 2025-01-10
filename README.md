@@ -48,6 +48,7 @@ Below are a few example labs you can explore. Each link points to a specific lab
 | **Kubernetes Auth Method**       | Learn how to enable and configure the k8s auth method                | [Open](./labs/lab_kubernetes_auth_method.md)        |
 | **Key/Value Secrets Engine**     | Practice creating, reading, updating, and deleting secrets in Vault. | [Open](./labs/lab_kv_secrets_engine.md)             |
 | **Transit Secrets Engine**       | Learn how to encrypt data using HashiCorp Vault                      | [Open](./labs/lab_transit_secrets_engine.md)        |
+| **PKI Secrets Engine**           | Use Vault as a Certificate Authority and generate certificates       | [Open](./labs/lab_pki_secrets_engine.md)            |
 | **Vault Policies**               | Explore how to create and apply policies to restrict access.         | [Open](./labs/lab_vault_policies.md)                |
 | **Vault Audit Devices**          | Enable and configure an audit device. View and rotate logs.          | [Open](./labs/lab_audit_devices.md)                 |
 | **Integrate Vault w/ Terraform** | Learn how to query Vault for secrets using HashiCorp Terraform       | [Open](./labs/lab_integrate_terraform_and_vault.md) |
