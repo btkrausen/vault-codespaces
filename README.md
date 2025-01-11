@@ -56,19 +56,19 @@ Below are a few example labs you can explore. Each link points to a specific lab
 
 ## Vault Secrets Engines
 
-| **Lab**                      | **Description**                                                |                        **Codespace**                        |                  **Link**                   |
-| ---------------------------- | -------------------------------------------------------------- | :---------------------------------------------------------: | :-----------------------------------------: |
-| **Key/Value Secrets Engine** | Create, read, update, and delete secrets in Vault.             | [Launch](https://codespaces.new/btkrausen/vault-codespaces) |   [Lab](./labs/lab_kv_secrets_engine.md)    |
-| **Transit Secrets Engine**   | Learn how to encrypt data using HashiCorp Vault                | [Launch](https://codespaces.new/btkrausen/vault-codespaces) | [Lab](./labs/lab_transit_secrets_engine.md) |
-| **PKI Secrets Engine**       | Use Vault as a Certificate Authority and generate certificates | [Launch](https://codespaces.new/btkrausen/vault-codespaces) |   [Lab](./labs/lab_pki_secrets_engine.md)   |
+| **Lab**                      | **Description**                                         |                        **Codespace**                        |                  **Link**                   |
+| ---------------------------- | ------------------------------------------------------- | :---------------------------------------------------------: | :-----------------------------------------: |
+| **Key/Value Secrets Engine** | Create, read, update, and delete secrets in Vault.      | [Launch](https://codespaces.new/btkrausen/vault-codespaces) |   [Lab](./labs/lab_kv_secrets_engine.md)    |
+| **Transit Secrets Engine**   | Learn how to encrypt data using HashiCorp Vault         | [Launch](https://codespaces.new/btkrausen/vault-codespaces) | [Lab](./labs/lab_transit_secrets_engine.md) |
+| **PKI Secrets Engine**       | Use Vault as a Certificate Authority and generate certs | [Launch](https://codespaces.new/btkrausen/vault-codespaces) |   [Lab](./labs/lab_pki_secrets_engine.md)   |
 
 ## Vault Management and Operations
 
-| **Lab**                          | **Description**                                                |                        **Codespace**                        |                      **Link**                      |
-| -------------------------------- | -------------------------------------------------------------- | :---------------------------------------------------------: | :------------------------------------------------: |
-| **Vault Policies**               | Explore how to create and apply policies to restrict access.   | [Launch](https://codespaces.new/btkrausen/vault-codespaces) |        [Lab](./labs/lab_vault_policies.md)         |
-| **Vault Audit Devices**          | Enable and configure an audit device. View and rotate logs.    | [Launch](https://codespaces.new/btkrausen/vault-codespaces) |         [Lab](./labs/lab_audit_devices.md)         |
-| **Integrate Vault w/ Terraform** | Learn how to query Vault for secrets using HashiCorp Terraform | [Launch](https://codespaces.new/btkrausen/vault-codespaces) | [Lab](./labs/lab_integrate_terraform_and_vault.md) |
+| **Lab**                          | **Description**                                           |                        **Codespace**                        |                      **Link**                      |
+| -------------------------------- | --------------------------------------------------------- | :---------------------------------------------------------: | :------------------------------------------------: |
+| **Vault Policies**               | Create and assign policies to restrict access.            | [Launch](https://codespaces.new/btkrausen/vault-codespaces) |        [Lab](./labs/lab_vault_policies.md)         |
+| **Vault Audit Devices**          | Enable and configure an audit device.                     | [Launch](https://codespaces.new/btkrausen/vault-codespaces) |         [Lab](./labs/lab_audit_devices.md)         |
+| **Integrate Vault w/ Terraform** | Learn how to query Vault for secrets when using Terraform | [Launch](https://codespaces.new/btkrausen/vault-codespaces) | [Lab](./labs/lab_integrate_terraform_and_vault.md) |
 
 ---
 
