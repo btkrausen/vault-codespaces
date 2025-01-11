@@ -35,7 +35,7 @@ Welcome to this HashiCorp Vault lab repo, where you can get hands-on experience 
 
 Below are a few example labs you can explore. Each link points to a specific lab file or folder within this repository.
 
-## 💻  HashiCorp Vault Basics 💻
+## HashiCorp Vault Basics 💻
 
 | **Lab**                   | **Description**                                  |                                                                                                    **Codespace**                                                                                                    |                  **Link**                   |
 | ------------------------- | ------------------------------------------------ | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------: |
@@ -45,7 +45,7 @@ Below are a few example labs you can explore. Each link points to a specific lab
 | **Using the Vault CLI**   | Practice mananaging Vault using the CLI          |                                                                             [Launch](https://codespaces.new/btkrausen/vault-codespaces)                                                                             |       [Lab](./labs/lab_vault_cli.md)        |
 | **Intiialize and Unseal** | Learn how to intialize and unseal Vault          |                                                                                                   **Coming Soon**                                                                                                   |               **Coming Soon**               |
 
-## 🪪  Vault Authentication 🪪
+## Vault Authentication 🪪
 
 | **Lab**                     | **Description**                                         |                        **Codespace**                        |                  **Link**                   |
 | --------------------------- | ------------------------------------------------------- | :---------------------------------------------------------: | :-----------------------------------------: |
@@ -55,7 +55,7 @@ Below are a few example labs you can explore. Each link points to a specific lab
 | **Userpass Auth Method**    | Configure the Userpass Auth Method                      | [Launch](https://codespaces.new/btkrausen/vault-codespaces) |  [Lab](./labs/lab_userpass_auth_method.md)  |
 | **Kubernetes Auth Method**  | Learn how to enable and configure the k8s auth method   | [Launch](https://codespaces.new/btkrausen/vault-codespaces) | [Lab](./labs/lab_kubernetes_auth_method.md) |
 
-## 🔑  Vault Secrets Engines 🔑
+## Vault Secrets Engines 🔑
 
 | **Lab**                      | **Description**                                         |                        **Codespace**                        |                  **Link**                   |
 | ---------------------------- | ------------------------------------------------------- | :---------------------------------------------------------: | :-----------------------------------------: |
@@ -63,7 +63,7 @@ Below are a few example labs you can explore. Each link points to a specific lab
 | **Transit Secrets Engine**   | Learn how to encrypt data using HashiCorp Vault         | [Launch](https://codespaces.new/btkrausen/vault-codespaces) | [Lab](./labs/lab_transit_secrets_engine.md) |
 | **PKI Secrets Engine**       | Use Vault as a Certificate Authority and generate certs | [Launch](https://codespaces.new/btkrausen/vault-codespaces) |   [Lab](./labs/lab_pki_secrets_engine.md)   |
 
-## ⛭  Vault Management and Operations ⛭
+## Vault Management and Operations ⛭
 
 | **Lab**                          | **Description**                                |                        **Codespace**                        |                      **Link**                      |
 | -------------------------------- | ---------------------------------------------- | :---------------------------------------------------------: | :------------------------------------------------: |
