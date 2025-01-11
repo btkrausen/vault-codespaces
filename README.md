@@ -37,12 +37,12 @@ Below are a few example labs you can explore. Each link points to a specific lab
 
 ## HashiCorp Vault Basics
 
-| **Lab**                      | **Description**                                                     |                                                                                                    **Codespace**                                                                                                    |                  **Link**                   |
-| ---------------------------- | ------------------------------------------------------------------- | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------: |
-| **Install Vault (Manually)** | Install Vault from Scratch and Start the Service                    | [Launch](https://github.com/codespaces/new/btkrausen/vault-codespaces?skip_quickstart=true&machine=basicLinux32gb&repo=907851765&ref=main&devcontainer_path=.devcontainer%2Finstall%2Fdevcontainer.json&geo=UsEast) | [Lab](./labs/lab_install_vault_manually.md) |
-| **Intro to Vault**           | Learn to verify Vault is running, check status, and basic commands. |                                                                             [Launch](https://codespaces.new/btkrausen/vault-codespaces)                                                                             |     [Lab](./labs/lab_intro_to_vault.md)     |
-| **Using the Vault UI**       | Configure and Manage Vault using the User Interface (UI)            |                                                                             [Launch](https://codespaces.new/btkrausen/vault-codespaces)                                                                             |        [Lab](./labs/lab_vault_ui.md)        |
-| **Using the Vault CLI**      | Practice mananaging Vault using the built-in CLI                    |                                                                             [Launch](https://codespaces.new/btkrausen/vault-codespaces)                                                                             |       [Lab](./labs/lab_vault_cli.md)        |
+| **Lab**                 | **Description**                                          |                                                                                                    **Codespace**                                                                                                    |                  **Link**                   |
+| ----------------------- | -------------------------------------------------------- | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------: |
+| **Install Vault**       | Install Vault from Scratch and Start the Service         | [Launch](https://github.com/codespaces/new/btkrausen/vault-codespaces?skip_quickstart=true&machine=basicLinux32gb&repo=907851765&ref=main&devcontainer_path=.devcontainer%2Finstall%2Fdevcontainer.json&geo=UsEast) | [Lab](./labs/lab_install_vault_manually.md) |
+| **Intro to Vault**      | Learn basic Vault commands.                              |                                                                             [Launch](https://codespaces.new/btkrausen/vault-codespaces)                                                                             |     [Lab](./labs/lab_intro_to_vault.md)     |
+| **Using the Vault UI**  | Configure and Manage Vault using the User Interface (UI) |                                                                             [Launch](https://codespaces.new/btkrausen/vault-codespaces)                                                                             |        [Lab](./labs/lab_vault_ui.md)        |
+| **Using the Vault CLI** | Practice mananaging Vault using the built-in CLI         |                                                                             [Launch](https://codespaces.new/btkrausen/vault-codespaces)                                                                             |       [Lab](./labs/lab_vault_cli.md)        |
 
 ## Vault Authentication
 
@@ -56,11 +56,11 @@ Below are a few example labs you can explore. Each link points to a specific lab
 
 ## Vault Secrets Engines
 
-| **Lab**                      | **Description**                                                      |                        **Codespace**                        |                  **Link**                   |
-| ---------------------------- | -------------------------------------------------------------------- | :---------------------------------------------------------: | :-----------------------------------------: |
-| **Key/Value Secrets Engine** | Practice creating, reading, updating, and deleting secrets in Vault. | [Launch](https://codespaces.new/btkrausen/vault-codespaces) |   [Lab](./labs/lab_kv_secrets_engine.md)    |
-| **Transit Secrets Engine**   | Learn how to encrypt data using HashiCorp Vault                      | [Launch](https://codespaces.new/btkrausen/vault-codespaces) | [Lab](./labs/lab_transit_secrets_engine.md) |
-| **PKI Secrets Engine**       | Use Vault as a Certificate Authority and generate certificates       | [Launch](https://codespaces.new/btkrausen/vault-codespaces) |   [Lab](./labs/lab_pki_secrets_engine.md)   |
+| **Lab**                      | **Description**                                                |                        **Codespace**                        |                  **Link**                   |
+| ---------------------------- | -------------------------------------------------------------- | :---------------------------------------------------------: | :-----------------------------------------: |
+| **Key/Value Secrets Engine** | Create, read, update, and delete secrets in Vault.             | [Launch](https://codespaces.new/btkrausen/vault-codespaces) |   [Lab](./labs/lab_kv_secrets_engine.md)    |
+| **Transit Secrets Engine**   | Learn how to encrypt data using HashiCorp Vault                | [Launch](https://codespaces.new/btkrausen/vault-codespaces) | [Lab](./labs/lab_transit_secrets_engine.md) |
+| **PKI Secrets Engine**       | Use Vault as a Certificate Authority and generate certificates | [Launch](https://codespaces.new/btkrausen/vault-codespaces) |   [Lab](./labs/lab_pki_secrets_engine.md)   |
 
 ## Vault Management and Operations
 
