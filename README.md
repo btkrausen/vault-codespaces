@@ -37,14 +37,13 @@ Below are a few example labs you can explore. Each link points to a specific lab
 
 ## 💻 HashiCorp Vault Basics
 
-| **Lab**                 | **Description**                                          |                                                                                                    **Codespace**                                                                                                    |                  **Link**                   |
-| ----------------------- | -------------------------------------------------------- | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------: |
-| **Install Vault**       | Install Vault from Scratch and Start the Service         | [Launch](https://github.com/codespaces/new/btkrausen/vault-codespaces?skip_quickstart=true&machine=basicLinux32gb&repo=907851765&ref=main&devcontainer_path=.devcontainer%2Finstall%2Fdevcontainer.json&geo=UsEast) | [Lab](./labs/lab_install_vault_manually.md) |
-| **Intro to Vault**      | Learn basic Vault commands.                              |                                                                             [Launch](https://codespaces.new/btkrausen/vault-codespaces)                                                                             |     [Lab](./labs/lab_intro_to_vault.md)     |
-| **Using the Vault UI**  | Configure and Manage Vault using the User Interface (UI) |                                                                             [Launch](https://codespaces.new/btkrausen/vault-codespaces)                                                                             |        [Lab](./labs/lab_vault_ui.md)        |
-| **Using the Vault CLI** | Practice mananaging Vault using the built-in CLI         |                                                                             [Launch](https://codespaces.new/btkrausen/vault-codespaces)                                                                             |       [Lab](./labs/lab_vault_cli.md)        |
-| **Intiialize and Unseal** | Learn how to intialize and unseal Vault         |                                                                             **Coming Soon**                                                                             |       **Coming Soon**        |
-
+| **Lab**                   | **Description**                                  |                                                                                                    **Codespace**                                                                                                    |                  **Link**                   |
+| ------------------------- | ------------------------------------------------ | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------: |
+| **Install Vault**         | Install Vault from Scratch and Start the Service | [Launch](https://github.com/codespaces/new/btkrausen/vault-codespaces?skip_quickstart=true&machine=basicLinux32gb&repo=907851765&ref=main&devcontainer_path=.devcontainer%2Finstall%2Fdevcontainer.json&geo=UsEast) | [Lab](./labs/lab_install_vault_manually.md) |
+| **Intro to Vault**        | Learn basic Vault commands.                      |                                                                             [Launch](https://codespaces.new/btkrausen/vault-codespaces)                                                                             |     [Lab](./labs/lab_intro_to_vault.md)     |
+| **Using the Vault UI**    | Configure and Manage Vault using the UI          |                                                                             [Launch](https://codespaces.new/btkrausen/vault-codespaces)                                                                             |        [Lab](./labs/lab_vault_ui.md)        |
+| **Using the Vault CLI**   | Practice mananaging Vault using the CLI          |                                                                             [Launch](https://codespaces.new/btkrausen/vault-codespaces)                                                                             |       [Lab](./labs/lab_vault_cli.md)        |
+| **Intiialize and Unseal** | Learn how to intialize and unseal Vault          |                                                                                                   **Coming Soon**                                                                                                   |               **Coming Soon**               |
 
 ## 🪪 Vault Authentication
 
@@ -66,11 +65,11 @@ Below are a few example labs you can explore. Each link points to a specific lab
 
 ## ⛭ Vault Management and Operations
 
-| **Lab**                          | **Description**                                           |                        **Codespace**                        |                      **Link**                      |
-| -------------------------------- | --------------------------------------------------------- | :---------------------------------------------------------: | :------------------------------------------------: |
-| **Vault Policies**               | Create and assign policies to restrict access.            | [Launch](https://codespaces.new/btkrausen/vault-codespaces) |        [Lab](./labs/lab_vault_policies.md)         |
-| **Vault Audit Devices**          | Enable and configure an audit device.                     | [Launch](https://codespaces.new/btkrausen/vault-codespaces) |         [Lab](./labs/lab_audit_devices.md)         |
-| **Integrate Vault w/ Terraform** | Learn how to query Vault when using Terraform | [Launch](https://codespaces.new/btkrausen/vault-codespaces) | [Lab](./labs/lab_integrate_terraform_and_vault.md) |
+| **Lab**                          | **Description**                                |                        **Codespace**                        |                      **Link**                      |
+| -------------------------------- | ---------------------------------------------- | :---------------------------------------------------------: | :------------------------------------------------: |
+| **Vault Policies**               | Create and assign policies to restrict access. | [Launch](https://codespaces.new/btkrausen/vault-codespaces) |        [Lab](./labs/lab_vault_policies.md)         |
+| **Vault Audit Devices**          | Enable and configure an audit device.          | [Launch](https://codespaces.new/btkrausen/vault-codespaces) |         [Lab](./labs/lab_audit_devices.md)         |
+| **Integrate Vault w/ Terraform** | Learn how to query Vault when using Terraform  | [Launch](https://codespaces.new/btkrausen/vault-codespaces) | [Lab](./labs/lab_integrate_terraform_and_vault.md) |
 
 ---
 
