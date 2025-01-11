@@ -43,7 +43,7 @@ Below are a few example labs you can explore. Each link points to a specific lab
 | **Intro to Vault**      | Learn basic Vault commands.                              |                                                                             [Launch](https://codespaces.new/btkrausen/vault-codespaces)                                                                             |     [Lab](./labs/lab_intro_to_vault.md)     |
 | **Using the Vault UI**  | Configure and Manage Vault using the User Interface (UI) |                                                                             [Launch](https://codespaces.new/btkrausen/vault-codespaces)                                                                             |        [Lab](./labs/lab_vault_ui.md)        |
 | **Using the Vault CLI** | Practice mananaging Vault using the built-in CLI         |                                                                             [Launch](https://codespaces.new/btkrausen/vault-codespaces)                                                                             |       [Lab](./labs/lab_vault_cli.md)        |
-| **Intialize and Unseal** | Learn how to intialize and unseal Vault         |                                                                             **Coming Soon**                                                                             |       **Coming Soon**        |
+| **Intiialize and Unseal** | Learn how to intialize and unseal Vault         |                                                                             **Coming Soon**                                                                             |       **Coming Soon**        |
 
 
 ## 🪪 Vault Authentication
