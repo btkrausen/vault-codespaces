@@ -35,23 +35,41 @@ Welcome to this HashiCorp Vault lab repo, where you can get hands-on experience 
 
 Below are a few example labs you can explore. Each link points to a specific lab file or folder within this repository.
 
-| **Lab**                          | **Description**                                                      | **Link**                                            |
-| -------------------------------- | -------------------------------------------------------------------- | --------------------------------------------------- |
-| **Install Vault (Manually)**     | Install Vault from Scratch and Start the Service                     | [Open](./labs/lab_install_vault_manually.md)        |
-| **Intro to Vault**               | Learn to verify Vault is running, check status, and basic commands.  | [Open](./labs/lab_intro_to_vault.md)                |
-| **Using the Vault UI**           | Configure and Manage Vault using the User Interface (UI)             | [Open](./labs/lab_vault_ui.md)                      |
-| **Using the Vault CLI**          | Practice mananaging Vault using the built-in CLI                     | [Open](./labs/lab_vault_cli.md)                     |
-| **Vault Tokens**                 | Learn the basics of using Vault tokens to authenticate.              | [Open](./labs/lab_vault_tokens.md)                  |
-| **Vault Response Wrapping**      | Use Response Wrapping to protect secrets                             | [Open](./labs/lab_response_wrapping.md)             |
-| **AppRole Auth Method**          | Enable, configure, and use the AppRole Auth Method                   | [Open](./labs/lab_approle_auth_method.md)           |
-| **Userpass Auth Method**         | Configure the Userpass Auth Method                                   | [Open](./labs/lab_userpass_auth_method.md)          |
-| **Kubernetes Auth Method**       | Learn how to enable and configure the k8s auth method                | [Open](./labs/lab_kubernetes_auth_method.md)        |
-| **Key/Value Secrets Engine**     | Practice creating, reading, updating, and deleting secrets in Vault. | [Open](./labs/lab_kv_secrets_engine.md)             |
-| **Transit Secrets Engine**       | Learn how to encrypt data using HashiCorp Vault                      | [Open](./labs/lab_transit_secrets_engine.md)        |
-| **PKI Secrets Engine**           | Use Vault as a Certificate Authority and generate certificates       | [Open](./labs/lab_pki_secrets_engine.md)            |
-| **Vault Policies**               | Explore how to create and apply policies to restrict access.         | [Open](./labs/lab_vault_policies.md)                |
-| **Vault Audit Devices**          | Enable and configure an audit device. View and rotate logs.          | [Open](./labs/lab_audit_devices.md)                 |
-| **Integrate Vault w/ Terraform** | Learn how to query Vault for secrets using HashiCorp Terraform       | [Open](./labs/lab_integrate_terraform_and_vault.md) |
+## HashiCorp Vault Basics 💻
+
+| **Lab**                   | **Description**                                  |                                                                                                    **Codespace**                                                                                                    |                  **Link**                   |
+| ------------------------- | ------------------------------------------------ | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------: |
+| **Install Vault**         | Install Vault from Scratch and Start the Service | [Launch](https://github.com/codespaces/new/btkrausen/vault-codespaces?skip_quickstart=true&machine=basicLinux32gb&repo=907851765&ref=main&devcontainer_path=.devcontainer%2Finstall%2Fdevcontainer.json&geo=UsEast) | [Lab](./labs/lab_install_vault_manually.md) |
+| **Intro to Vault**        | Learn basic Vault commands.                      |                                                                             [Launch](https://codespaces.new/btkrausen/vault-codespaces)                                                                             |     [Lab](./labs/lab_intro_to_vault.md)     |
+| **Using the Vault UI**    | Configure and Manage Vault using the UI          |                                                                             [Launch](https://codespaces.new/btkrausen/vault-codespaces)                                                                             |        [Lab](./labs/lab_vault_ui.md)        |
+| **Using the Vault CLI**   | Practice mananaging Vault using the CLI          |                                                                             [Launch](https://codespaces.new/btkrausen/vault-codespaces)                                                                             |       [Lab](./labs/lab_vault_cli.md)        |
+| **Intiialize and Unseal** | Learn how to intialize and unseal Vault          |                                                                                                   **Coming Soon**                                                                                                   |               **Coming Soon**               |
+
+## Vault Authentication 🪪
+
+| **Lab**                     | **Description**                                         |                        **Codespace**                        |                  **Link**                   |
+| --------------------------- | ------------------------------------------------------- | :---------------------------------------------------------: | :-----------------------------------------: |
+| **Vault Tokens**            | Learn the basics of using Vault tokens to authenticate. | [Launch](https://codespaces.new/btkrausen/vault-codespaces) |      [Lab](./labs/lab_vault_tokens.md)      |
+| **Vault Response Wrapping** | Use Response Wrapping to protect secrets                | [Launch](https://codespaces.new/btkrausen/vault-codespaces) |   [Lab](./labs/lab_response_wrapping.md)    |
+| **AppRole Auth Method**     | Enable, configure, and use the AppRole Auth Method      | [Launch](https://codespaces.new/btkrausen/vault-codespaces) |  [Lab](./labs/lab_approle_auth_method.md)   |
+| **Userpass Auth Method**    | Configure the Userpass Auth Method                      | [Launch](https://codespaces.new/btkrausen/vault-codespaces) |  [Lab](./labs/lab_userpass_auth_method.md)  |
+| **Kubernetes Auth Method**  | Learn how to enable and configure the k8s auth method   | [Launch](https://codespaces.new/btkrausen/vault-codespaces) | [Lab](./labs/lab_kubernetes_auth_method.md) |
+
+## Vault Secrets Engines 🔑
+
+| **Lab**                      | **Description**                                         |                        **Codespace**                        |                  **Link**                   |
+| ---------------------------- | ------------------------------------------------------- | :---------------------------------------------------------: | :-----------------------------------------: |
+| **Key/Value Secrets Engine** | Create, read, update, and delete secrets in Vault.      | [Launch](https://codespaces.new/btkrausen/vault-codespaces) |   [Lab](./labs/lab_kv_secrets_engine.md)    |
+| **Transit Secrets Engine**   | Learn how to encrypt data using HashiCorp Vault         | [Launch](https://codespaces.new/btkrausen/vault-codespaces) | [Lab](./labs/lab_transit_secrets_engine.md) |
+| **PKI Secrets Engine**       | Use Vault as a Certificate Authority and generate certs | [Launch](https://codespaces.new/btkrausen/vault-codespaces) |   [Lab](./labs/lab_pki_secrets_engine.md)   |
+
+## Vault Management and Operations ⛭
+
+| **Lab**                          | **Description**                                |                        **Codespace**                        |                      **Link**                      |
+| -------------------------------- | ---------------------------------------------- | :---------------------------------------------------------: | :------------------------------------------------: |
+| **Vault Policies**               | Create and assign policies to restrict access. | [Launch](https://codespaces.new/btkrausen/vault-codespaces) |        [Lab](./labs/lab_vault_policies.md)         |
+| **Vault Audit Devices**          | Enable and configure an audit device.          | [Launch](https://codespaces.new/btkrausen/vault-codespaces) |         [Lab](./labs/lab_audit_devices.md)         |
+| **Integrate Vault w/ Terraform** | Learn how to query Vault when using Terraform  | [Launch](https://codespaces.new/btkrausen/vault-codespaces) | [Lab](./labs/lab_integrate_terraform_and_vault.md) |
 
 ---
 
