@@ -1,4 +1,4 @@
-# Response Wrapping Demo: Secret Retrieval
+# Response Wrapping Lab: Secret Retrieval
 
 ## Overview
 Learn how to create and use response wrapping tokens to securely share Vault secrets.
