@@ -129,7 +129,7 @@ export VAULT_ADDR='http://127.0.0.1:8200'
 curl http://127.0.0.1:8200/v1/sys/health | jq
 ```
 
-4. Verify Vault is running and unsealed:
+4. Verify Vault is running and responding to commands:
 
 ```bash
 vault status
