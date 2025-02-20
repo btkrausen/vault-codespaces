@@ -22,4 +22,7 @@
     "containerEnv": {
       "SKIP_SETCAP": "true"
     }
+        
+    // Port forwarding for Vault
+    "forwardPorts": [8200]
 }
