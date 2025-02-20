@@ -21,7 +21,7 @@ Learn how to use the Vault UI to configure and manage HashiCorp Vault
 
 1. After your Codespace starts, click on the "Ports" tab in the bottom panel
 
-<img src="./img/" width="50%">
+<img src="./img/ports.png" width="50%">
 
 2. You should see port 8200 forwarded
 3. Click on the "Open in Browser" icon (globe) for port 8200
