@@ -21,5 +21,8 @@
     // Skip setcap configuration in the container for Codespaces
     "containerEnv": {
       "SKIP_SETCAP": "true"
-    }
+    },
+        
+    // Port forwarding for Vault
+    "forwardPorts": [8200]
 }
