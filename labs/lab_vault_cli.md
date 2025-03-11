@@ -153,9 +153,6 @@ vault kv put prd-secrets/myapp/config message="version 1"
 vault kv put prd-secrets/myapp/config message="version 2"
 vault kv put prd-secrets/myapp/config message="version 3"
 
-# View secret versions
-vault kv list -versions prd-secrets/myapp/config
-
 # Soft delete latest version
 vault kv delete prd-secrets/myapp/config
 
@@ -165,12 +162,13 @@ vault kv undelete -versions=3 prd-secrets/myapp/config
 
 2. **Metadata Operations**
 ```bash
-# Add custom metadata
-vault kv metadata put prd-secrets/myapp/config \
-    custom_metadata=environment="development" \
-    max_versions=5
+# Add custom metadata and set the maximum versions of the secret
+vault kv metadata put  \
+    -max-versions 5 \
+    -custom-metadata "environment=development" \
+    prd-secrets/myapp/config
 
-# Read metadata
+# Read metadata and see versions of secrets
 vault kv metadata get prd-secrets/myapp/config
 ```
 
