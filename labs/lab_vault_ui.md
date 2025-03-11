@@ -69,7 +69,7 @@ Learn how to use the Vault UI to configure and manage HashiCorp Vault
    - Create a new user:
      - Username: "webapp-user"
      - Password: "password123"
-     - Assign the "webapp-readonly" policy
+     - Assign the "webapp-readonly" policy (expand "Tokens" and add the policy under "Generated Token's Policies)
 
 ## Part 3: Testing Access
 
