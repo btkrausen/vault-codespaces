@@ -60,6 +60,9 @@ EOF
 
 4. Test authentication:
 ```bash
+# Unset the environment variable
+unset VAULT_TOKEN
+
 # Login as admin
 vault login -method=userpass \
     username=admin \
