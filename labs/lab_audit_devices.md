@@ -31,6 +31,8 @@ vault status
 vault login root
 ```
 
+> Note: If you are performing the labs on your own machine, you might need to add `sudo` before the following commands to work. This is not necessary on the Codespace instance since it automatically logs you in as the `root` user.
+
 ### 2. Enable File Audit Device
 Enable the file audit device and configure it to write to a specific file:
 ```bash
