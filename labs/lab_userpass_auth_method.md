@@ -26,6 +26,12 @@ vault login root
 
 # Enable the auth method
 vault auth enable userpass
+
+# Validate that the KV secrets engines are enabled:
+vault secrets list
+
+# Enable KV secrets engine if NOT already enabled:
+vault secrets enable -path=secret kv-v2
 ```
 
 2. Create users:
