@@ -25,6 +25,9 @@ vault login root
 
 # Validate that AppRole is already enabled at the approle/ path
 vault auth list
+
+# Enable AppRole if not yet enabled
+vault auth enable approle
 ```
 
 2. Create policy for the app:
