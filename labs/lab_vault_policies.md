@@ -42,6 +42,10 @@ vault status
 path "secret/data/*" {
   capabilities = ["read", "list"]
 }
+
+path "secret/metadata/*" {
+  capabilities = ["list"]
+} 
 ```
 
 3. Write this policy to Vault:
@@ -85,18 +89,22 @@ vault kv put secret/test-3 password="newpass"
 vault kv delete secret/test-1
 ```
 
-### Part 3: Creating a More Complex Policy
+5. When you're finished, log back in as root:
+```bash
+unset VAULT_TOKEN
+vault login root
+```
 
-1. Create a new file called `app-policy.hcl` with these contents:
+### Part 3: Creating a More Complex Policy with Entity Templating
+
+1. Create the Policy
+
+Create a file called `app-policy.hcl` with the following contents:
+
 ```hcl
 # Allow management of app-specific secrets
-path "secret/data/app/${identity.entity.name}/*" {
+path "secret/data/app/{{identity.entity.name}}/*" {
   capabilities = ["create", "read", "update", "delete", "list"]
-}
-
-# Deny access to other paths
-path "secret/data/app/*" {
-  capabilities = ["deny"]
 }
 
 # Allow listing of secret mount
@@ -105,34 +113,62 @@ path "secret/metadata/*" {
 }
 ```
 
-2. Write the new policy:
+2. Then, write the policy:
 ```bash
 vault policy write app-policy app-policy.hcl
 ```
 
-3. Create an entity and token for testing:
+3. Enable and Configure the Userpass Auth Method:
 ```bash
-# Create an entity
 vault auth enable userpass
-vault write auth/userpass/users/app1 \
-    password="password123" \
-    policies="app-policy"
+```
 
-# Login with the user
+4. Get the Userpass Accessor and set to a variable:
+```bash
+USERPASS_ACCESSOR=$(vault auth list -format=json | jq -r '."userpass/".accessor')
+```
+
+5. Create an entity used to map the user to the policy:
+```bash
+vault write identity/entity name="app1" policies="app-policy"
+```
+Note the entity ID in the output.
+
+6. Create the Entity Alias for the Userpass user:
+```bash
+vault write identity/entity-alias \
+    name="app1" \
+    mount_accessor="$USERPASS_ACCESSOR" \
+    canonical_id="<add_entity_id_here>"
+```
+Use the entity ID from the previous step in this command.
+
+7. Create the Userpass User
+```bash
+vault write auth/userpass/users/app1 \
+    password="password123"
+```
+
+8. Test Login and Permissions using the Templated Policy:
+```bash
+# Login as the user
 vault login -method=userpass \
     username=app1 \
     password=password123
-```
 
-4. Test the templated policy:
-```bash
 # These should succeed
 vault kv put secret/app/app1/config api_key="test123"
 vault kv get secret/app/app1/config
 
-# These should fail
+# These should fail with 403
 vault kv put secret/app/other-app/config api_key="test123"
 vault kv put secret/test-3 password="newpass"
+```
+
+9. When you're finished, log back in as root:
+```bash
+unset VAULT_TOKEN
+vault login root
 ```
 
 ### Part 4: Understanding Policy Precedence
