@@ -47,21 +47,6 @@ vault unwrap <wrapping_token>
 vault unwrap <wrapping_token>
 ```
 
-## Testing Different Scenarios
-
-1. Short TTL wrap:
-```bash
-vault kv get -wrap-ttl=30s secret/demo
-sleep 31
-vault unwrap <wrapping_token>  # Should fail as token is now expired
-```
-
-2. Wrap specific field:
-```bash
-vault kv get -wrap-ttl=1h -field=password secret/demo
-vault unwrap <wrapping_token>  # Returns only password
-```
-
 ## Challenge Exercise
 
 1. Create multi-step wrapping:
