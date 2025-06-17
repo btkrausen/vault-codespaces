@@ -69,6 +69,11 @@ path "kv/data/api/keys" {
 path "kv/metadata/*" {
     capabilities = ["list"]
 }
+
+# Permit Terraform to issue itself a new child token
+path "auth/token/create" {
+  capabilities = ["update"]
+}
 ```
 
 2. Write the policy to Vault:
