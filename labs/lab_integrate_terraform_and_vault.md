@@ -228,7 +228,9 @@ At this point you have successfully integrated HashiCorp Vault with Terraform, a
 ### Step 7: Improve Security with Ephemeral Secrets
 In this step, we will leverage ephemeral secrets in Terraform to ensure sensitive data does not end up in the Terraform state file. This is a best practice for managing sensitive information.
 
-While the sensitive keywordin the output will stop the terraform from outputing sensitive values to logs or to the terminal via the output, it does not prevent the sensitive values from being stored in the Terraform state file. To completely eliminate sensitive values from the state file, we will use ephemeral secrets introduced in terraform 1.10 and version 5.0 of the vault terraform provider..
+While the sensitive keyword in the output will stop the terraform from outputing sensitive values to logs or to the terminal via the output, it does not prevent the sensitive values from being stored in the Terraform state file. To completely eliminate sensitive values from the state file, we will use ephemeral secrets introduced in terraform 1.10 and version 5.0 of the vault terraform provider.
+
+NOTE: This step requires Terraform version 1.10 or greater and the Vault provider version 5.0 or greater.
 
 1. Observe the secrets in the Terraform state file:
 
@@ -247,7 +249,7 @@ You will see the sensitive values stored in the state file. Lets migrate to the 
 
 ```
 
-3. In the file `main.tf`, modify the 'data' entries to 'ephemeral'. This will leverage ephemral secrets to read the secrets from Vault completly eliminating them from the Terraform state file:
+3. In the file `main.tf`, modify the 'data' entries to 'ephemeral'. This will leverage ephemral secrets to read the secrets from Vault completly eliminating them from the Terraform state file. NOTE: the data "vault_kv_secrets_v2" is now depracated, and this change MUST be made to use the new `ephemeral` block:
 
 ```hcl
 
