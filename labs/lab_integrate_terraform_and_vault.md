@@ -221,6 +221,64 @@ terraform output dev_api_key
 terraform output prod_api_key
 ```
 
+### Step 7: Improve Security with Ephemeral Secrets
+In this step, we will leverage ephemeral secrets in Terraform to ensure sensitive data does not end up in the Terraform state file. This is a best practice for managing sensitive information.
+
+
+2. Update the script to use the vault provider with ephemeral value support. Modify `provider.tf` to use a version 5.0 or greater.:
+```hcl
+...
+      source  = "hashicorp/vault"
+      version = "~> 5.0"
+...
+
+```
+
+3. In the file `main.tf`, modify the 'data' entries to 'ephemeral'. This will leverage ephemral secrets to read the secrets from Vault completly eliminating them from the Terraform state file:
+```hcl
+
+# Read database secrets from Vault
+ephemeral "vault_kv_secret_v2" "database_creds" {
+  mount = "kv"
+  name  = "database/config"
+}
+
+# Read API Keys from Vault
+ephemral "vault_kv_secret_v2" "api_keys" {
+  mount = "kv"
+  name  = "api/keys"
+}
+
+# Example resource that would use the secrets
+resource "null_resource" "example" {
+  provisioner "local-exec" {
+    command = "echo 'This is where you would use the secrets in your actual infrastructure'"
+  }
+}
+```
+
+4. With ephemeral secrets, we can use the values in other resources, but there is no way to record or output their values. So we can delete the file 'outputs.tf'.
+
+#### Step 8: Re-Initialize and Apply Terraform Configuration with Ephemeral Secrets
+1. Re-initialize the Terraform working directory to apply the changes, upgrade the provider, and ensure everything is up to date:
+
+```bash
+terraform init -upgrade
+```
+
+2. Verify the plan works with the updated configuration:
+```bash
+terraform plan
+```
+
+3. Apply the Terraform configuration and confirm by typing `yes`:
+```bash
+terraform apply
+```
+
+4. Having deleted the output, the Since we are using ephemeral secrets, there will be no outputs to display. The secrets are fetched directly from Vault and not stored in the Terraform state file.
+
+
 ### 🎉 Congrats, you've successfully integrated HashiCorp Terraform and Vault. Terraform was able to obtain secrets from Vault to use within the Terraform configuration.
 
 ## Challenge Exercises
