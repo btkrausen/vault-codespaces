@@ -137,6 +137,8 @@ vault status
 
 ## 🚀 Congrats, you've successfully installed HashiCorp Vault manually
 
+This is intentionally the end of the lab. Other configurations, such as Vault initialization and unsealing are covered in subsequent labs.
+
 ## ❗ Important Notes
 
 1. **Security Considerations**
