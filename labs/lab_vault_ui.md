@@ -26,7 +26,7 @@ Learn how to use the Vault UI to configure and manage HashiCorp Vault
 2. You should see port 8200 forwarded
 3. Click on the "Open in Browser" icon (globe) for port 8200
 4. You'll be directed to the Vault UI login page
-5. Log in using the token: `root`
+5. Log in using the root token - type `root` and press enter.
 
 ## Part 2: Exploring the UI
 
