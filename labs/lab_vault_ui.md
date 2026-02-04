@@ -65,16 +65,17 @@ Learn how to use the Vault UI to configure and manage HashiCorp Vault
 
 5. **Enable and Configure Auth Method**
    - Go to "Access" → "Auth Methods"
-   - Enable the "Username & Password" auth method
+   - Enable the "Username & Password" auth method at the default path of `userpass`
+   - Once enabled, click on "View method >" on the top right.
    - Create a new user:
-     - Username: "webapp-user"
-     - Password: "password123"
-     - Assign the "webapp-readonly" policy (expand "Tokens" and add the policy under "Generated Token's Policies)
+     - Username: `webapp-user`
+     - Password: `password123`
+     - Assign the `webapp-readonly` policy (expand "Tokens" and add the policy under "Generated Token's Policies)
 
 ## Part 3: Testing Access
 
 1. Log out of the root account
-2. Log back in using the webapp-user credentials
+2. Log back in using the `webapp-user` credentials
 3. Try to:
    - Read the webapp secrets (should succeed)
    - Create new secrets (should fail)
