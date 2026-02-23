@@ -93,26 +93,26 @@ Learn how to use the Vault UI to configure and manage HashiCorp Vault
    - Modify the existing secrets by creating a new secret with new values on the same path (should fail)
    - Click on `KV` at the top and try to create a new secret (should get permission denied)
 
-   ## Part 4: Grant CRUD to webapp-user and Test
+## Part 4: Grant CRUD to webapp-user and Test
 
-   1. Log back in as `root` (use the root token name on the Vault UI login page).  
-   2. Go to Policies → ACL Policies → edit `webapp-readonly` and replace with:
-   ```hcl
-   path "kv/data/webapp" {
-      capabilities = ["create", "read", "update", "delete"]
-   }
+1. Log back in as `root` (use the root token name on the Vault UI login page).  
+2. Go to Policies → ACL Policies → edit `webapp-readonly` and replace with:
+```hcl
+path "kv/data/webapp" {
+   capabilities = ["create", "read", "update", "delete"]
+}
 
-   path "kv/metadata/*" {
-      capabilities = ["list"]
-   }
-   ```
-   Save the policy.
+path "kv/metadata/*" {
+   capabilities = ["list"]
+}
+```
+Save the policy.
 
-   3. Log out root and log in as `webapp-user` (userpass).  
-   4. In Secrets Engines → kv → webapp:
-       - Create a new secret or modify the existing values (should succeed).
-       - Delete the secret to confirm delete capability (should succeed).
-       
+3. Log out root and log in as `webapp-user` (userpass).  
+4. In Secrets Engines → kv → webapp:
+      - Create a new secret or modify the existing values (should succeed).
+      - Delete the secret to confirm delete capability (should succeed).
+
 ## 🔍 Exploration Tasks
 
 Try these additional tasks to deepen your understanding:
