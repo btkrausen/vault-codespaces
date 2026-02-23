@@ -36,17 +36,18 @@ Learn how to use the Vault UI to configure and manage HashiCorp Vault
    - Check the server configuration details
 
 2. **Enable a Secrets Engine**
-   - Click on "Secrets" in the left navigation
-   - Click "Enable new engine"
-   - Select "KV" (Key-Value)
-   - Use path: "kv"
-   - Choose Version 2
-   - Click "Enable Engine"
+   - Click on `Secrets Engines` in the left navigation
+   - Click `Enable new engine`
+   - Select `KV` (Key-Value)
+   - Use default path: `kv`
+   - Under `Method Options`, choose Version `2` if not already selected
+   - Click `Enable Engine` at the bottom
 
 3. **Create Secrets**
    - Navigate to your new KV secrets engine
-   - Create a new secret path called "webapp"
-   - Add the following key-value pairs:
+   - Click on `Create secret`
+   - Create a new secret path called `webapp`
+   - Add the following key-value pairs - you don't need to add the quotes, just the values:
      ```
      database_url: "postgresql://localhost:5432/myapp"
      api_key: "your-secret-key-123"
@@ -54,33 +55,64 @@ Learn how to use the Vault UI to configure and manage HashiCorp Vault
    - Save the secret
 
 4. **Create a Policy**
-   - Navigate to "Policies" → "ACL Policies"
-   - Create a new policy named "webapp-readonly"
+   - Navigate to `Policies` → `ACL Policies`
+   - Create a new policy named `webapp-readonly`
    - Add the following policy:
      ```hcl
      path "kv/data/webapp" {
        capabilities = ["read"]
      }
+
+     path "kv/metadata/*" {
+       capabilities = ["list"]
+     }
      ```
+   - Save the policy
 
 5. **Enable and Configure Auth Method**
-   - Go to "Access" → "Auth Methods"
-   - Enable the "Username & Password" auth method at the default path of `userpass`
-   - Once enabled, click on "View method >" on the top right.
+   - Navigate back to the main dashboard (click on the Vault logo in the top left)
+   - Go to `Access` → `Authentication Methods`
+   - Click `Enable new method` and select `Userpass`
+   - Use the default path of `userpass` and click `Enable method`
+   - Once enabled, click on `View method >` on the top right.
    - Create a new user:
      - Username: `webapp-user`
      - Password: `password123`
-     - Assign the `webapp-readonly` policy (expand "Tokens" and add the policy under "Generated Token's Policies)
+     - Assign the `webapp-readonly` policy (expand "Tokens" and add the policy under "Generated Token's Policies - type `webapp-readonly`)
+     - Click `Save`
 
 ## Part 3: Testing Access
 
-1. Log out of the root account
-2. Log back in using the `webapp-user` credentials
-3. Try to:
-   - Read the webapp secrets (should succeed)
-   - Create new secrets (should fail)
-   - Modify existing secrets (should fail)
+1. Log out of the root account by clicking on the user icon in the top left and selecting `Logout`
+2. Select the `userpass` method from the Method dropdown
+3. Log in using the `webapp-user` username and password of `password123`
+4. Click on the `Secrets Engines` in the left navigation and navigate to your `kv` secrets engine
+5. Try to access the `webapp` secret you created earlier. Click on the `Secret` tab
+6. Try to:
+   - Read the webapp secrets by clikcing the eye icon (should succeed)
+   - Modify the existing secrets by creating a new secret with new values on the same path (should fail)
+   - Click on `KV` at the top and try to create a new secret (should get permission denied)
 
+   ## Part 4: Grant CRUD to webapp-user and Test
+
+   1. Log back in as `root` (use the root token name on the Vault UI login page).  
+   2. Go to Policies → ACL Policies → edit `webapp-readonly` and replace with:
+   ```hcl
+   path "kv/data/webapp" {
+      capabilities = ["create", "read", "update", "delete"]
+   }
+
+   path "kv/metadata/*" {
+      capabilities = ["list"]
+   }
+   ```
+   Save the policy.
+
+   3. Log out root and log in as `webapp-user` (userpass).  
+   4. In Secrets Engines → kv → webapp:
+       - Create a new secret or modify the existing values (should succeed).
+       - Delete the secret to confirm delete capability (should succeed).
+       
 ## 🔍 Exploration Tasks
 
 Try these additional tasks to deepen your understanding:
