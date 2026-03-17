@@ -47,15 +47,6 @@ vault unwrap <wrapping_token>
 vault unwrap <wrapping_token>
 ```
 
-## Challenge Exercise
-
-1. Create multi-step wrapping:
-   - Create a secret
-   - Wrap it with 1h TTL
-   - Create policy allowing unwrap
-   - Create token with policy
-   - Pass wrapped token to new token
-
 ## Cleanup
 ```bash
 vault kv delete secret/credentials
