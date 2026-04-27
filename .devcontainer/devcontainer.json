@@ -3,6 +3,7 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
+  "remoteUser": "root",
   "customizations": {
     "vscode": {
       "extensions": ["hashicorp.hcl"],
