@@ -1,7 +1,9 @@
 # Hands-on Lab: Integrating HashiCorp Vault with Terraform
 
 ## Overview
-In this lab, you will learn how to integrate HashiCorp Vault with Terraform using proper authentication and authorization. You will create a new Key-Value secrets engine, write secrets to it, create a dedicated policy and token for Terraform, and then use Terraform to access and output these secrets.
+In this lab, you will learn how to integrate HashiCorp Vault with Terraform using proper authentication and authorization. You will create a new Key-Value secrets engine, write secrets to it, create a dedicated policy and token for Terraform, and then use Terraform to access and output these secrets. Labeling the secrets as sensitive ensures they are not output in plaintext in the terminal or logs.
+
+The lab will then demonstrate features in release 5.0 of the vault terraform provisioner to support the ephemral values features introduced in terraform 1.10 to enhance security.
 
 **Time Required:** ~45 minutes
 
@@ -220,6 +222,86 @@ terraform output database_password
 terraform output dev_api_key
 terraform output prod_api_key
 ```
+
+At this point you have successfully integrated HashiCorp Vault with Terraform, allowing Terraform to read secrets from Vault and output them securely.
+
+### Step 7: Improve Security with Ephemeral Secrets
+In this step, we will leverage ephemeral secrets in Terraform to ensure sensitive data does not end up in the Terraform state file. This is a best practice for managing sensitive information.
+
+While the sensitive keyword in the output will stop the terraform from outputing sensitive values to logs or to the terminal via the output, it does not prevent the sensitive values from being stored in the Terraform state file. To completely eliminate sensitive values from the state file, we will use ephemeral secrets introduced in terraform 1.10 and version 5.0 of the vault terraform provider.
+
+NOTE: This step requires Terraform version 1.10 or greater and the Vault provider version 5.0 or greater.
+
+1. Observe the secrets in the Terraform state file:
+
+```bash
+terraform state pull | jq '.resources[] | select(.type == "vault_kv_secret_v2") | .instances[].attributes.data'
+```
+
+You will see the sensitive values stored in the state file. Lets migrate to the newer releases of the vault provider to leverage ephemeral secrets.
+
+2. Update the script to use the vault provider with ephemeral value support. Modify `provider.tf` to use a version 5.0 or greater.:
+```hcl
+...
+      source  = "hashicorp/vault"
+      version = "~> 5.0"
+...
+
+```
+
+3. In the file `main.tf`, modify the 'data' entries to 'ephemeral'. This will leverage ephemral secrets to read the secrets from Vault completly eliminating them from the Terraform state file. NOTE: the data "vault_kv_secrets_v2" is now depracated, and this change MUST be made to use the new `ephemeral` block:
+
+```hcl
+
+# Read database secrets from Vault
+ephemeral "vault_kv_secret_v2" "database_creds" {
+  mount = "kv"
+  name  = "database/config"
+}
+
+# Read API Keys from Vault
+ephemral "vault_kv_secret_v2" "api_keys" {
+  mount = "kv"
+  name  = "api/keys"
+}
+
+# Example resource that would use the secrets
+resource "null_resource" "example" {
+  provisioner "local-exec" {
+    command = "echo 'This is where you would use the secrets in your actual infrastructure'"
+  }
+}
+```
+
+4. With ephemeral secrets, we can refrence these values in other resources, but there is no way to record or output their values. So we will delete the file 'outputs.tf', 
+
+#### Step 8: Re-Initialize and Apply Terraform Configuration with Ephemeral Secrets
+1. Re-initialize the Terraform working directory to apply the changes, upgrade the provider, and ensure everything is up to date:
+
+```bash
+terraform init -upgrade
+```
+
+2. Verify the plan works with the updated configuration:
+```bash
+terraform plan
+```
+
+The plan will show the removal of the outputs since they are no longer defined in the configuration.
+
+3. Apply the Terraform configuration and confirm by typing `yes`:
+```bash
+terraform apply
+```
+
+4. Having deleted the output, the Since we are using ephemeral secrets, there will be no outputs to display. The secrets are fetched directly from Vault and not stored in the Terraform state file. we can demonstrate they are not stored in the state file by running:
+
+```bash
+terraform state pull | jq '.resources[] | select(.type == "vault_kv_secret_v2") | .instances[].attributes.data'
+```
+
+You should see that the sensitive values are no longer present in the state file. This will simplify the management of secrets in terraform files and enhance security by ensuring sensitive data is not stored in the state file.
+
 
 ### 🎉 Congrats, you've successfully integrated HashiCorp Terraform and Vault. Terraform was able to obtain secrets from Vault to use within the Terraform configuration.
 
