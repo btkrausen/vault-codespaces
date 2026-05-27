@@ -3,6 +3,7 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
+  "runArgs": ["--cap-add=IPC_LOCK"],
   "customizations": {
     "vscode": {
       "extensions": ["hashicorp.hcl"],
