@@ -3,6 +3,7 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
+  "remoteUser": "root",
   "runArgs": ["--cap-add=IPC_LOCK"],
   "customizations": {
     "vscode": {

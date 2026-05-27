@@ -2,7 +2,11 @@
 FROM hashicorp/vault:latest
 
 # Install git
+USER root
+
 RUN apk add --no-cache git jq logrotate openssl
+
+RUN sed -i 's|/sbin/nologin|/bin/bash|g' /etc/passwd
 
 # Download and install latest Terraform
 RUN apk add --no-cache curl unzip && \
@@ -13,6 +17,8 @@ RUN apk add --no-cache curl unzip && \
     apk del curl unzip
     
 # Set environment variables for dev mode
+USER vault
+
 ENV VAULT_DEV_ROOT_TOKEN_ID=root
 ENV VAULT_DEV_LISTEN_ADDRESS=0.0.0.0:8200
 
